@@ -42,3 +42,6 @@ Route::View('/donorRegister','donorRegister');
 Route::View('/donorTable','donorTable');
 Route::View('/bloodTable','bloodTable');
 Route::View('/recipientTable','recipientTable');
+Route::View('/campaigns','campaigns');
+Route::View('/userHome','userHome');
+Route::View('/donationForm','donationForm');

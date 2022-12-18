@@ -12,15 +12,18 @@
     <!-- Section: Design Block -->
     <section class="text-center">
   <!-- Background image -->
-  <div class="p-5 bg-image" style="background-image: url('/image/back.jpg');height: 330px;">
-        <a href="/" class="text-primary fs-5" style="margin-left:1000px;">
-          <b><i class="fa-sharp fa-solid fa-house"></i> Back to Home</b>
-        </a>
+  <div class="p-5 bg-image" style="background-image: url('/image/sign-in.jpg');height: 330px;">
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/"><b>Home</b></a></li>
+          <li class="breadcrumb-item active" aria-current="page"><b>Login</b></li>
+        </ol>
+      </nav>
   </div>
   <!-- Background image -->
 
   <div class="card mx-4 mx-md-5 shadow-5-strong justify-content-center" style="
-        margin-top: -100px;
+        margin-top: -150px;
         background: hsla(0, 0%, 100%, 0.8);
         backdrop-filter: blur(10px);
         width:700px;

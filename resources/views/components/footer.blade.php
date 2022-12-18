@@ -33,7 +33,8 @@
 		</div>
 
 		<div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top text-white">
-		<p>&copy; 2022 Donation, As. All rights reserved.</p>
+		<p>&copy; 2022 Donation, As. All rights reserved.&nbsp;&nbsp;</p>
+		<p>[ Developed by Ankita Roy & Anirban De ]</p>
 		</div>
 	</footer>
 </section>

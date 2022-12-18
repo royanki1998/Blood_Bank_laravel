@@ -13,9 +13,12 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">	
 	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 
-	<!-- swiper js link -->
-	<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+	 
 
     <!-- common css file -->
     <link rel="stylesheet" href="/allCSS/maincss.css">
