@@ -1,0 +1,223 @@
+
+a{
+    text-decoration:none;
+    /* color: black; */
+}
+.navi{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.back{
+    height:90%;
+    width: 100%;
+}
+.clr{
+    color:red;
+}
+.backimg{
+    /* z-index=-1; */
+    opacity:70%;
+}
+.logo{
+    height:60px;
+    width:150px;
+}
+
+/* userhome navigation dropdown */
+ .drop-down {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: black;
+    color: white;
+  }
+
+ .drop-down:hover .dropdown-content {
+    display: block;
+  }
+  /* drop css end */
+
+
+#home-main{
+     font-family: 'Abril Fatface',cursive;
+     color:black;
+     font-size:50px;position:absolute; 
+     bottom:200px; 
+     left:200px;
+}
+.about-second{
+    position:relative;
+    top:40px;
+    left:20px;
+    
+}
+.about-first{
+    position:relative;
+    top:80px;
+    right:40px;
+}
+
+.about-first .about-in{
+    background-color:#F4F6F6;
+    font-size:22px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#campaigns{
+    position:relative;
+    top:300px;
+}
+
+.donor-first{
+    position:relative;
+    top:180px;
+    height:700px;
+    /* background-color:#F2D7D5; */
+    background-color:#DCCDCD;    
+    font-family: 'Dosis', sans-serif;
+  }
+
+  .donor-first .heading{
+    color: #594F4F;
+    font-family: 'Abril Fatface',cursive;
+  }
+
+  .donor-first .donor-h{
+    padding: 4em;
+    margin-left: 150px;
+  }
+
+
+/* sliderjs css for carousal */
+
+  .review{
+    height:400px;
+    padding: 1em;
+  }
+
+  .review .slide{
+    padding:1rem;
+    box-shadow: 5px 5px 5px #CBC7C7;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    position: relative;
+    height:330px;
+    background-color:#F7F7F7;    
+  }
+
+    .review .slide .fa-quote-right{
+        position: absolute;
+        top:2rem; 
+        right:2rem;
+        font-size: 4rem;
+        color:#E6B0AA;
+    }
+    .review .slide .user .user-info .fa-star{
+        font-size:1em;
+    }
+
+    .review .slide .user .user-info .fa-star-half-alt{
+        font-size: 1em;
+    }
+
+    .review .slide .user{
+        display: flex;
+        gap:1.5rem;
+        align-items: center;
+        padding-bottom: 1.5rem;
+    }
+
+    .review .slide .user img{
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .review .slide .user h3{
+        color:var(--black);
+        font-size: 2rem;
+        padding-bottom: .5rem;
+    }
+
+    .review .slide .user i{
+        font-size: 1.3rem;
+        color:green;
+    }
+
+    .review .slide p{
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    /* 2nd carousal */
+
+    .cam-swiper {
+        width: 500px;
+        height: 400px;
+        padding: 10px;
+      }
+
+      .cam-slide {
+        background-position: center;
+        width: 500px;
+        height: 300px;
+      }
+
+      .cam-slide img {
+        display: block;
+        width: 100%;
+        height:400px;
+      }
+
+      /* 2nd carousal end */
+ 
+    /* sliderjs css end */
+
+    .donor-re{
+        position:relative; 
+        top:80px; 
+        height:250px; 
+        width:800px; 
+        background-color:#D70B0B;
+        font-family: 'Kaushan Script', cursive;        
+        box-shadow: 5px 5px 10px #BDB0B0;
+    }
+    .anim-but{
+        position: relative;
+        font-family: 'Dosis', sans-serif;
+        font-size: 1em;
+        animation-name: test;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear; 
+        margin-left: 100px;
+        width: 180px;
+        height: 50px;
+    }
+    .anim-but a{
+        color: #D70B0B;
+
+    }
+    @keyframes test{
+        from {left: 0px;}
+        to {left: 100px;}
+    }

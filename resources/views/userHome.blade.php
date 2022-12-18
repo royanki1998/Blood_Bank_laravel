@@ -1,4 +1,4 @@
-<x-header />
+<x-user-header />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +61,7 @@
 									<div class="user">
 										<img src="/image/jumi.jpg" alt="">
 										<div class="user-info">
-											<h2>Jumi Kalita</h2>
+											<h3>jumi kalita</h3>
 											<div class="stars">
 												<i class="fas fa-star"></i>
 												<i class="fas fa-star"></i>
@@ -81,7 +81,7 @@
 									<div class="user">
 										<img src="/image/Passport.jpg" alt="">
 										<div class="user-info">
-											<h4>Ankita Roy</h4>
+											<h3>Ankita Roy</h3>
 											<div class="stars">
 												<i class="fas fa-star"></i>
 												<i class="fas fa-star"></i>
@@ -101,7 +101,7 @@
 									<div class="user">
 										<img src="/image/donor1.jpg" alt="">
 										<div class="user-info">
-											<h4>Prashanka Chakrabarty</h4>
+											<h3>Prashanka</h3>
 											<div class="stars">
 												<i class="fas fa-star"></i>
 												<i class="fas fa-star"></i>
@@ -121,7 +121,7 @@
 									<div class="user">
 										<img src="/image/geetu.jpg" alt="">
 										<div class="user-info">
-											<h4>Geetashri Barman</h4>
+											<h3>Geetashri</h3>
 											<div class="stars">
 												<i class="fas fa-star"></i>
 												<i class="fas fa-star"></i>
@@ -141,7 +141,7 @@
 									<div class="user">
 										<img src="/image/donor2.jpg" alt="">
 										<div class="user-info">
-											<h4>Den Sons</h4>
+											<h3>Mark Den</h3>
 											<div class="stars">
 												<i class="fas fa-star"></i>
 												<i class="fas fa-star"></i>
@@ -161,7 +161,7 @@
 									<div class="user">
 										<img src="/image/Koala.jpg" alt="">
 										<div class="user-info">
-											<h4>Joshna Boro</h4>
+											<h3>Joshna Boro</h3>
 											<div class="stars">
 												<i class="fas fa-star"></i>
 												<i class="fas fa-star"></i>
@@ -181,7 +181,7 @@
 									<div class="user">
 										<img src="/image/donor3.jpg" alt="">
 										<div class="user-info">
-											<h4>John Will</h4>
+											<h3>John Will</h3>
 											<div class="stars">
 												<i class="fas fa-star"></i>
 												<i class="fas fa-star"></i>
@@ -198,21 +198,12 @@
 								</div>
 
 							</div>
-							<div class="swiper-button-next" style="color:#FA3737;"></div>
-							<div class="swiper-button-prev" style="color:#FA3737;"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
 							<div class="swiper-pagination"></div>
 						</div>
 		</div><br><br>
 	</section>
-
-	<!-- BECOME A DONOR SECTION -->
-		<div class="container my-5 p-3 pb-0 pe-lg-0 pt-lg-5 rounded-3 border donor-re">
-			<div class=" p-3 p-lg-5 pt-lg-3" style="margin-left:100px;">
-			<i class="fas fa-quote-left" style="color:white; font-size:2em;"></i>
-			<h2 style="color:white;">&nbsp;&nbsp;Become a Donor by joinging us....</h2><br>
-				<button type="button" class="btn btn-light anim-but"><a href="/"><b>Register today</b></a></button>
-			</div>
-		</div>
 
 	<!--CAMPAIGNS  -->
 	<section id="campaigns" class="section-content-block bg-white" >
