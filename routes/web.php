@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['middleware'=>['LoginCheck']],function(){
+    Route::get('/login',[AuthController::class,'login']);
+    Route::get('/register',[AuthController::class,'register']);
+    Route::post('/register',[AuthController::class,'registerUser'])->name('register-user');
+    Route::post('/login',[AuthController::class,'loginUser'])->name('login-user');
+});
 
-Route::view("login",'/login');
-Route::view("register",'/register');
 
-/*------------------------ Dashboard Routes ------------------------------------*/
-Route::view('/index','index');
+Route::group(['middleware'=>['AuthCheck']],function(){
+
+    Route::view('/index','index');
 Route::View('/widgets','widgets');
 Route::View('/charts','charts');
 Route::View('/tables','tables');
@@ -45,3 +51,8 @@ Route::View('/recipientTable','recipientTable');
 Route::View('/campaigns','campaigns');
 Route::View('/userHome','userHome');
 Route::View('/donationForm','donationForm');
+Route::get('/logout',[AuthController::class,'logout']);
+
+});
+
+/*------------------------ Dashboard Routes ------------------------------------*/

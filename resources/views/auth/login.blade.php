@@ -35,18 +35,27 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6">
           <h2 class="fw-bold mb-5">Sign in to your account</h2>
-          <form class="needs-validation" method="post">
+          <form action = "{{route('login-user')}}" class="needs-validation" method="post">
+            @if(Session::has('success'))
+            <div class="alert alert-success">{{Session::get('success')}}</div>
+            @endif
+            @if(Session::has('fail'))
+            <div class="alert alert-danger">{{Session::get('fail')}}</div>
+            @endif
+            @csrf
               <div class="form-outline mb-4">
                 <div class="form-outline">
-                  <input type="text" id="username" class="form-control  shadow-none" required/>
+                  <input name="email" type="text" id="username" class="form-control  shadow-none" />
                   <label class="form-label" for="fname">Username</label>
                 </div>
+                <span class="text-danger">@error('email'){{$message}}@enderror</span>
               </div>
               <div class="form-outline mb-4">
                 <div class="form-outline">
-                  <input type="password" id="password" class="form-control  shadow-none" required />
+                  <input name ="password" type="password" id="password" class="form-control  shadow-none"  />
                   <label class="form-label" for="lname">Pasword</label>
                 </div>
+                <span class="text-danger">@error('password'){{$message}}@enderror</span>
               </div>
 
             <!-- Submit button -->
