@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\dbController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,7 @@ Route::View('/pages-invoice','pages-invoice');
 Route::View('/authentication-login','authentication-login');
 Route::View('/authentication-register','authentication-register');
 Route::View('/donorRegister','donorRegister');
-Route::View('/donorTable','donorTable');
+Route::get('/donorTable',[dbController::class,'dbDonor']);
 Route::View('/bloodTable','bloodTable');
 Route::View('/recipientTable','recipientTable');
 Route::View('/campaigns','campaigns');

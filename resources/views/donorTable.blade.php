@@ -39,6 +39,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .w-5{
+        display : none
+      }
+    </style>
   </head>
 
   <body>
@@ -120,45 +125,33 @@
                     >
                       <thead>
                         <tr>
-                          <th>Adhaar no.</th>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Address</th>
-                          <th>Contact</th>
+                          <th>ADHAAR NUMBER</th>
+                          <th>NAME</th>
                           <th>DOB</th>
-                          <th>Age</th>
-                          <th>Gender</th>
-                          <th>Weight</th>
-                          <th>Group</th>
+                          <th>GENDER</th>
+                          <th>WEIGHT</th>
+                          <th>CONTACT</th>
+                          <th>EMAIL</th>
+                          <th>LAST DONATED</th>
+                          <th>BLOOD GROUP</th>
                         </tr>
                       </thead>
+                      @foreach($donors as $donor)
                       <tbody>
-                        <tr>
-                            <th>987654321234</th>
-                            <th>Ankita Roy</th>
-                            <th>abc@gmail.com</th>
-                            <th>Jorhat</th>
-                            <th>98765445</th>
-                            <th>02-06-1998</th>
-                            <th>24</th>
-                            <th>Female</th>
-                            <th>48 kg</th>
-                            <th>A+</th>
-                        </tr>
-                        <tr>
-                            <th>234554321234</th>
-                            <th>Anirban De</th>
-                            <th>xyz@gmail.com</th>
-                            <th>Jorhat</th>
-                            <th>8486655445</th>
-                            <th>16-11-1998</th>
-                            <th>24</th>
-                            <th>Male</th>
-                            <th>58 kg</th>
-                            <th>O+</th>
-                        </tr>
+                          <th>{{$donor['adhar_no']}}</th>
+                          <th>{{$donor['name']}}</th>
+                          <th>{{$donor['dob']}}</th>
+                          <th>{{$donor['gender']}}</th>
+                          <th>{{$donor['weight']}}</th>
+                          <th>{{$donor['phone']}}</th>
+                          <th>{{$donor['email']}}</th>
+                          <th>{{$donor['last_donated']}}</th>
+                          <th>{{$donor['blood_group']}}</th>
                       </tbody>
+                      @endforeach
                     </table>
+
+                    
                   </div>
                 </div>
               </div>
@@ -174,6 +167,9 @@
           <!-- ============================================================== -->
           <!-- End Right sidebar -->
           <!-- ============================================================== -->
+          <div>
+                      {{$donors->links()}}
+                    </div>
         </div>
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
@@ -205,11 +201,13 @@
     <script src="../assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
     <script src="../assets/extra-libs/multicheck/jquery.multicheck.js"></script>
     <script src="../assets/extra-libs/DataTables/datatables.min.js"></script>
+
     <script>
       /****************************************
        *       Basic Table                   *
        ****************************************/
-      $("#zero_config").DataTable();
+     // $("#zero_config").DataTable();
     </script>
+
   </body>
 </html>

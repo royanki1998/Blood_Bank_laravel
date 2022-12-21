@@ -6,11 +6,22 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		
+	</style>
 	@include('cdn')
 	<title>Home Page</title>
 
 </head>
 <body>
+<div class="preloader">
+        <div class="lds-ripple">
+          <div class="lds-pos"></div>
+          <div class="lds-pos"></div>
+        </div>
+      </div>
+
+
 	<div>
 		<img class="back backimg" src="/image/back2.jpeg">
 	    <div id="home-main">

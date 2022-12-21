@@ -14,7 +14,7 @@
       content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+    <title>Donor Register</title>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -50,7 +50,7 @@
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
                       Registration
                     </li>
