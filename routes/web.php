@@ -28,7 +28,7 @@ Route::group(['middleware'=>['LoginCheck']],function(){
 
 Route::group(['middleware'=>['AuthCheck']],function(){
 
-    Route::view('/index','index');
+Route::view('/index','index');
 Route::View('/widgets','widgets');
 Route::View('/charts','charts');
 Route::View('/tables','tables');
@@ -52,6 +52,8 @@ Route::View('/recipientTable','recipientTable');
 Route::View('/campaigns','campaigns');
 Route::View('/userHome','userHome');
 Route::View('/donationForm','donationForm');
+Route::View('/userProfile','userProfile');
+
 Route::get('/logout',[AuthController::class,'logout']);
 
 });

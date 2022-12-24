@@ -14,7 +14,7 @@
                   alt="homepage"
                   class="light-logo"
                   width="25"
-                />
+                />  
               </b>
               <!--End Logo icon -->
               <!-- Logo text -->

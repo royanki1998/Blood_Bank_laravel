@@ -46,8 +46,7 @@
         <li class="nav-item drop-down">
             <a href="" class="nav-link clr drop-a">Profile</a>
             <div class="dropdown-content">
-                <a href="#">My Activity</a>
-                <a href="#">Settings</a>
+                <a href="/">My Profile</a>
                 <a href="/">Logout</a>
             </div>        
         </li>

@@ -221,3 +221,11 @@ a{
         from {left: 0px;}
         to {left: 100px;}
     }
+
+    /* user profile */
+
+    #profile_img{
+      height:400px;
+      width:1000px;
+      border-radius:5px;
+    }
