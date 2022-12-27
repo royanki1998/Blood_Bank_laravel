@@ -91,7 +91,7 @@
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
-                      Blood Table
+                      Blood Details Table
                     </li>
                   </ol>
                 </nav>
@@ -108,11 +108,79 @@
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
+          <div class="row d-flex justify-content-evenly">
+            <!-- Column -->
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h6 class="text-white py-3">A+</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-hover">
+                <div class="box bg-success text-center">
+                  <h6 class="text-white py-3">A-</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-hover">
+                <div class="box bg-warning text-center">
+                  <h6 class="text-white py-3">B+</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-hover">
+                <div class="box bg-danger text-center">
+                  <h6 class="text-white py-3">B-</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-hover">
+                <div class="box bg-info text-center">
+                  <h6 class="text-white py-3">AB+</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-hover">
+                <div class="box bg-warning text-center">
+                  <h6 class="text-white py-3">AB-</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-hover">
+                <div class="box bg-info text-center">
+                  <h6 class="text-white py-3">O+</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-hover">
+                <div class="box bg-success text-center">
+                  <h6 class="text-white py-3">O-</h6>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
           <div class="row">
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Blood Table</h5>
+                  <h5 class="card-title">Blood Details Table</h5>
                   <div class="table-responsive">
                     <table
                       id="zero_config"
@@ -121,30 +189,15 @@
                       <thead>
                         <tr>
                           <th>Blood id</th>
-                          <th>Type</th>
-                          <th>Availability</th>
+                          <th>Blood Group</th>
+                          <th>Donor ID</th>
+                          <th>Donation date</th>
+                          <th>Expiry</th>
                           <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
-                         <tr>
-                            <td>01</td>
-                            <td>A+</td>
-                            <td>10 units</td>
-                            <td><button class="btn btn-danger btn-sm">Delete</button></td>
-                         </tr>
-                         <tr>
-                            <td>02</td>
-                            <td>A-</td>
-                            <td>14 units</td>
-                            <td><button class="btn btn-danger btn-sm">Delete</button></td>
-                         </tr>
-                         <tr>
-                            <td>03</td>
-                            <td>B+</td>
-                            <td>12 units</td>
-                            <td><button class="btn btn-danger btn-sm">Delete</button></td>
-                         </tr>
+                          <!-- PHP CODE FOR INSERTION FROM DATABASE / ACTION WALE FIELD ME DELETE AUR EDIT BUTTON HONA HOAG  -->
                       </tbody>
                     </table>
                   </div>

@@ -134,6 +134,8 @@
                           <th>EMAIL</th>
                           <th>LAST DONATED</th>
                           <th>BLOOD GROUP</th>
+                          <!-- SOME FIELDS NEEDS TO BE INSERTED
+                                [ADDRESS,ADHAAR FILE, PASSWORD] -->
                         </tr>
                       </thead>
                       @foreach($donors as $donor)

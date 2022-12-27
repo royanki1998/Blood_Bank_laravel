@@ -51,8 +51,16 @@ Route::View('/bloodTable','bloodTable');
 Route::View('/recipientTable','recipientTable');
 Route::View('/campaigns','campaigns');
 Route::View('/userHome','userHome');
-Route::View('/donationForm','donationForm');
+Route::View('/donationFormMale','donationFormMale');
+Route::View('/donationFormFemale','donationFormFemale');
+Route::View('/addDonor','addDonor');
+Route::View('/addBlood','addBlood');
+Route::View('/addRecipient','addRecipient');
+Route::View('/allotedBlood','allotedBlood');
+Route::View('/allotBloodForm','allotBloodForm');
 Route::View('/userProfile','userProfile');
+Route::View('/userDonateM','userDonateM');
+Route::View('/userDonateF','userDonateF');
 
 Route::get('/logout',[AuthController::class,'logout']);
 

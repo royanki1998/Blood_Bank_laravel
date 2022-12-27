@@ -14,7 +14,7 @@
       content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Donor Register</title>
+    <title>Add Recipient Details</title>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -49,10 +49,10 @@
           <div class="row">
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
+                  <ol class="breadcrumb" style="font-size:14px;">
                     <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
-                      Registration
+                        Add Recipient Details
                     </li>
                   </ol>
                 </nav>
@@ -82,7 +82,8 @@
         <div class="auth-box bg-dark border-top border-secondary">
             <div>
                 <div class="text-center text-white py-4">
-                    <h2>Registration</h2>
+                    <h2>Add Recipient Details</h2>
+                    <p>Details must match any valid ID proof of the recipient(Adhaar, Voter ID, Pasport, etc)</p>
                 </div>
 
                 <!-- Form -->
@@ -90,20 +91,42 @@
                     <div class="row pb-4">
                         <div class="col-12">
                             <div class="row">
+                                <div class="col-md-12 mb-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span
+                                                    class="input-group-text bg-success text-white h-100"
+                                                    id="recipientadhaar"
+                                                    ><i class="mdi mdi-newspaper fs-6"></i
+                                                ></span>
+                                            </div>
+                                            <input
+                                            type="number"
+                                            class="form-control"
+                                            placeholder="Adhaar Number"
+                                            aria-label="recipientadhaar"
+                                            aria-describedby="basic-addon1"
+                                            required
+                                            />
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="uname"
+                                                id="recipientname"
                                                 ><i class="mdi mdi-account fs-6"></i
                                             ></span>
                                         </div>
                                         <input
                                         type="text"
                                         class="form-control"
-                                        placeholder="Username"
-                                        aria-label="Username"
+                                        placeholder="Full name"
+                                        aria-label="recipientname"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -114,15 +137,15 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="email"
+                                                id="recipientemail"
                                                 ><i class="mdi mdi-email fs-6"></i
                                             ></span>
                                         </div>
                                         <input
-                                        type="text"
+                                        type="email"
                                         class="form-control"
-                                        placeholder="Email Address"
-                                        aria-label="email"
+                                        placeholder="Email"
+                                        aria-label="recipientemail"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -136,7 +159,7 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="contact"
+                                                id="recipientcontact"
                                                 ><i class="mdi mdi-phone fs-6"></i
                                             ></span>
                                         </div>
@@ -144,7 +167,7 @@
                                         type="number"
                                         class="form-control"
                                         placeholder="Contact"
-                                        aria-label="contact"
+                                        aria-label="recipientcontact"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -155,7 +178,7 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="address"
+                                                id="recipientaddress"
                                                 ><i class="mdi mdi-account-location fs-6"></i
                                             ></span>
                                         </div>
@@ -163,7 +186,7 @@
                                         type="text"
                                         class="form-control"
                                         placeholder="Address"
-                                        aria-label="address"
+                                        aria-label="recipientaddress"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -177,7 +200,7 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="dob"
+                                                id="recipientdob"
                                                 ><i class="mdi mdi-cake-variant fs-6"></i
                                             ></span>
                                         </div>
@@ -185,7 +208,7 @@
                                         type="date"
                                         class="form-control"
                                         placeholder="DOB"
-                                        aria-label="dob"
+                                        aria-label="recipientdob"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -202,9 +225,9 @@
                                         </div>
                                         <select 
                                         class="form-select shadow-none form-control"
-                                        id="gender"
+                                        id="recipientgender"
                                         name="gender"
-                                        aria-label="Username">
+                                        aria-label="recipientgender">
                                             <option value="">Gender</option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
@@ -220,15 +243,34 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="basic-addon1"
+                                                id="recipientweight"
+                                                ><i class="mdi mdi-weight fs-6"></i
+                                            ></span>
+                                        </div>
+                                        <input
+                                        type="number"
+                                        class="form-control"
+                                        placeholder="Weight"
+                                        aria-label="recipientweight"
+                                        aria-describedby="basic-addon1"
+                                        required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span
+                                                class="input-group-text bg-success text-white h-100"
+                                                id="bloodgroup"
                                                 ><i class="mdi mdi-dna fs-6"></i
                                             ></span>
                                         </div>
                                         <select 
                                         class="form-select shadow-none form-control"
-                                        id="bloodgrp"
-                                        name="bloodgrp"
-                                        aria-label="Username">
+                                        id="recipientbloodgroup"
+                                        name="recipientbloodgroup"
+                                        aria-label="recipientbloodgroup">
                                             <option value="">Blood group</option>
                                             <option value="A+">A+</option>
                                             <option value="A-">A-</option>
@@ -241,99 +283,34 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span
-                                                class="input-group-text bg-success text-white h-100"
-                                                id="weight"
-                                                ><i class="mdi mdi-weight fs-6"></i
-                                            ></span>
-                                        </div>
-                                        <input
-                                        type="number"
-                                        class="form-control"
-                                        placeholder="Weight"
-                                        aria-label="weight"
-                                        aria-describedby="basic-addon1"
-                                        required
-                                        />
-                                    </div>
-                                </div>
                             </div>
-
-                            <!-- <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span
-                                                class="input-group-text bg-success text-white h-100"
-                                                id="adhaar"
-                                                ><i class="mdi mdi-weight fs-4"></i
-                                            ></span>
-                                        </div>
-                                        <input
-                                        type="number"
-                                        class="form-control form-control-lg"
-                                        placeholder="Adhaar No."
-                                        aria-label="adhaar"
-                                        aria-describedby="basic-addon1"
-                                        required
-                                        />
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span
-                                                class="input-group-text bg-success text-white h-100"
-                                                id="basic-addon1"
-                                                ><i class="mdi mdi-account-alert fs-5"></i
-                                            ></span>
-                                        </div>
-                                        <select 
-                                        class="form-select shadow-none form-control form-control-lg"
-                                        id="registerType"
-                                        name="registerType"
-                                        aria-label="Username">
-                                            <option value="">Select type</option>
-                                            <option value="donor">Donor</option>
-                                            <option value="recipient">Recipient</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <!-- <div class="row">
-                                <div class="col-md-12 mb-4">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span
-                                                class="input-group-text bg-success text-white h-100"
-                                                id="basic-addon1"
-                                                ><i class="mdi mdi-newspaper fs-6"></i
-                                            ></span>
-                                        </div>
-                                        <input
-                                        type="number"
-                                        class="form-control"
-                                        placeholder="Adhaar Number"
-                                        aria-label="Username"
-                                        aria-describedby="basic-addon1"
-                                        required
-                                        />
-                                    </div>
-                                </div>
-
-                            </div> -->
                             
                             <div class="row">
-                                <!-- <div class="col-md-6 mb-4">
+                                <div class="col-md-6 mb-4">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                         <span
-                                            class="input-group-text bg-danger text-white h-100"
+                                            class="input-group-text bg-info text-white h-100"
+                                            id="recipientID"
+                                            ><i class="mdi mdi-lock fs-6"></i
+                                        ></span>
+                                        </div>
+                                        <input
+                                        type="file"
+                                        class="form-control"
+                                        placeholder=""
+                                        aria-label="recipientID"
+                                        aria-describedby="basic-addon1"
+                                        required
+                                        />
+                                    </div>
+                                    <label for="donorID" style="color:white;">Upload recipient's Adhaar card properly showing the DOB</label>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                        <span
+                                            class="input-group-text bg-info text-white h-100"
                                             id="donorID"
                                             ><i class="mdi mdi-lock fs-6"></i
                                         ></span>
@@ -347,27 +324,7 @@
                                         required
                                         />
                                     </div>
-                                    <label for="donorID" style="color:white;">Upload donor's Adhaar card properly showing the DOB</label>
-                                </div> -->
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                        <span
-                                            class="input-group-text bg-info text-white h-100"
-                                            id="donorpassword"
-                                            ><i class="mdi mdi-lock fs-6"></i
-                                        ></span>
-                                        </div>
-                                        <input
-                                        type="password"
-                                        class="form-control"
-                                        placeholder="Password"
-                                        aria-label="Password"
-                                        aria-describedby="basic-addon1"
-                                        required
-                                        />
-                                    </div>
-
+                                    <label for="donorID" style="color:white;">Upload valid prescription/referral</label>
                                 </div>
                             </div>
                         </div>
@@ -378,15 +335,15 @@
                             <div class="pt-3 d-grid">
                             <button
                                 class="btn btn-block btn-lg btn-info"
-                                type="submit"
-                            >
-                                Sign Up
+                                type="submit">
+                                Add
                             </button>
                             </div>
                         </div>
                         </div>
                     </div>
                 </form>
+                <br><br>
             </div>
         </div>
     </div>

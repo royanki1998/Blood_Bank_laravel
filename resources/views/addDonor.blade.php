@@ -49,10 +49,10 @@
           <div class="row">
               <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
+                  <ol class="breadcrumb" style="font-size:14px;">
                     <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
-                      Registration
+                      Add Donor Details
                     </li>
                   </ol>
                 </nav>
@@ -82,7 +82,8 @@
         <div class="auth-box bg-dark border-top border-secondary">
             <div>
                 <div class="text-center text-white py-4">
-                    <h2>Registration</h2>
+                    <h2>Add New Donor Details</h2>
+                    <p>Details must match any valid ID proof of the donor(Adhaar, Voter ID, Pasport, etc)</p>
                 </div>
 
                 <!-- Form -->
@@ -90,20 +91,42 @@
                     <div class="row pb-4">
                         <div class="col-12">
                             <div class="row">
+                                <div class="col-md-12 mb-4">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span
+                                                    class="input-group-text bg-success text-white h-100"
+                                                    id="donoradhaar"
+                                                    ><i class="mdi mdi-newspaper fs-4"></i
+                                                ></span>
+                                            </div>
+                                            <input
+                                            type="number"
+                                            class="form-control form-control-lg"
+                                            placeholder="Adhaar Number"
+                                            aria-label="donoradhaar"
+                                            aria-describedby="basic-addon1"
+                                            required
+                                            />
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="uname"
-                                                ><i class="mdi mdi-account fs-6"></i
+                                                id="donorname"
+                                                ><i class="mdi mdi-account fs-4"></i
                                             ></span>
                                         </div>
                                         <input
                                         type="text"
-                                        class="form-control"
-                                        placeholder="Username"
-                                        aria-label="Username"
+                                        class="form-control form-control-lg"
+                                        placeholder="Full name"
+                                        aria-label="donorname"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -114,15 +137,15 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="email"
-                                                ><i class="mdi mdi-email fs-6"></i
+                                                id="donoremail"
+                                                ><i class="mdi mdi-email fs-4"></i
                                             ></span>
                                         </div>
                                         <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Email Address"
-                                        aria-label="email"
+                                        type="email"
+                                        class="form-control form-control-lg"
+                                        placeholder="Email"
+                                        aria-label="donoremail"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -136,15 +159,15 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="contact"
-                                                ><i class="mdi mdi-phone fs-6"></i
+                                                id="donorcontact"
+                                                ><i class="mdi mdi-phone fs-4"></i
                                             ></span>
                                         </div>
                                         <input
                                         type="number"
-                                        class="form-control"
+                                        class="form-control form-control-lg"
                                         placeholder="Contact"
-                                        aria-label="contact"
+                                        aria-label="donorcontact"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -155,15 +178,15 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="address"
-                                                ><i class="mdi mdi-account-location fs-6"></i
+                                                id="donoraddress"
+                                                ><i class="mdi mdi-account-location fs-4"></i
                                             ></span>
                                         </div>
                                         <input
                                         type="text"
-                                        class="form-control"
+                                        class="form-control form-control-lg"
                                         placeholder="Address"
-                                        aria-label="address"
+                                        aria-label="donoraddress"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -177,15 +200,15 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="dob"
-                                                ><i class="mdi mdi-cake-variant fs-6"></i
+                                                id="donordob"
+                                                ><i class="mdi mdi-cake-variant fs-4"></i
                                             ></span>
                                         </div>
                                         <input
                                         type="date"
-                                        class="form-control"
+                                        class="form-control form-control-lg"
                                         placeholder="DOB"
-                                        aria-label="dob"
+                                        aria-label="donordob"
                                         aria-describedby="basic-addon1"
                                         required
                                         />
@@ -197,14 +220,14 @@
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
                                                 id="gender"
-                                                ><i class="mdi mdi-gender-male-female fs-6"></i
+                                                ><i class="mdi mdi-gender-male-female fs-5"></i
                                             ></span>
                                         </div>
                                         <select 
-                                        class="form-select shadow-none form-control"
-                                        id="gender"
+                                        class="form-select shadow-none form-control form-select-lg"
+                                        id="donorgender"
                                         name="gender"
-                                        aria-label="Username">
+                                        aria-label="donorgender">
                                             <option value="">Gender</option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
@@ -220,15 +243,34 @@
                                         <div class="input-group-prepend">
                                             <span
                                                 class="input-group-text bg-success text-white h-100"
-                                                id="basic-addon1"
-                                                ><i class="mdi mdi-dna fs-6"></i
+                                                id="donorweight"
+                                                ><i class="mdi mdi-weight fs-4"></i
+                                            ></span>
+                                        </div>
+                                        <input
+                                        type="number"
+                                        class="form-control form-control-lg"
+                                        placeholder="Weight"
+                                        aria-label="donorweight"
+                                        aria-describedby="basic-addon1"
+                                        required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span
+                                                class="input-group-text bg-success text-white h-100"
+                                                id="bloodgroup"
+                                                ><i class="mdi mdi-dna fs-5"></i
                                             ></span>
                                         </div>
                                         <select 
-                                        class="form-select shadow-none form-control"
-                                        id="bloodgrp"
-                                        name="bloodgrp"
-                                        aria-label="Username">
+                                        class="form-select shadow-none form-control form-select-lg"
+                                        id="donorbloodgroup"
+                                        name="donorbloodgroup"
+                                        aria-label="donorbloodgroup">
                                             <option value="">Blood group</option>
                                             <option value="A+">A+</option>
                                             <option value="A-">A-</option>
@@ -239,25 +281,6 @@
                                             <option value="O+">O+</option>
                                             <option value="O-">O-</option>
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span
-                                                class="input-group-text bg-success text-white h-100"
-                                                id="weight"
-                                                ><i class="mdi mdi-weight fs-6"></i
-                                            ></span>
-                                        </div>
-                                        <input
-                                        type="number"
-                                        class="form-control"
-                                        placeholder="Weight"
-                                        aria-label="weight"
-                                        aria-describedby="basic-addon1"
-                                        required
-                                        />
                                     </div>
                                 </div>
                             </div>
@@ -304,43 +327,20 @@
                                     </div>
                                 </div>
                             </div> -->
-
-                            <!-- <div class="row">
-                                <div class="col-md-12 mb-4">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span
-                                                class="input-group-text bg-success text-white h-100"
-                                                id="basic-addon1"
-                                                ><i class="mdi mdi-newspaper fs-6"></i
-                                            ></span>
-                                        </div>
-                                        <input
-                                        type="number"
-                                        class="form-control"
-                                        placeholder="Adhaar Number"
-                                        aria-label="Username"
-                                        aria-describedby="basic-addon1"
-                                        required
-                                        />
-                                    </div>
-                                </div>
-
-                            </div> -->
                             
                             <div class="row">
-                                <!-- <div class="col-md-6 mb-4">
+                                <div class="col-md-6 mb-4">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                         <span
                                             class="input-group-text bg-danger text-white h-100"
                                             id="donorID"
-                                            ><i class="mdi mdi-lock fs-6"></i
+                                            ><i class="mdi mdi-lock fs-4"></i
                                         ></span>
                                         </div>
                                         <input
                                         type="file"
-                                        class="form-control"
+                                        class="form-control form-control-lg"
                                         placeholder=""
                                         aria-label="donorID"
                                         aria-describedby="basic-addon1"
@@ -348,19 +348,20 @@
                                         />
                                     </div>
                                     <label for="donorID" style="color:white;">Upload donor's Adhaar card properly showing the DOB</label>
-                                </div> -->
+                                </div>
+
                                 <div class="col-md-6 mb-4">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                         <span
                                             class="input-group-text bg-info text-white h-100"
-                                            id="donorpassword"
-                                            ><i class="mdi mdi-lock fs-6"></i
+                                            id="basic-addon2"
+                                            ><i class="mdi mdi-lock fs-4"></i
                                         ></span>
                                         </div>
                                         <input
                                         type="password"
-                                        class="form-control"
+                                        class="form-control form-control-lg"
                                         placeholder="Password"
                                         aria-label="Password"
                                         aria-describedby="basic-addon1"
@@ -378,15 +379,15 @@
                             <div class="pt-3 d-grid">
                             <button
                                 class="btn btn-block btn-lg btn-info"
-                                type="submit"
-                            >
-                                Sign Up
+                                type="submit">
+                                Add
                             </button>
                             </div>
                         </div>
                         </div>
                     </div>
                 </form>
+                <br><br>
             </div>
         </div>
     </div>

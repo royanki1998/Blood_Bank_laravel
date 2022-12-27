@@ -50,9 +50,7 @@
                 <a href="/">Logout</a>
             </div>        
         </li>
-
         </li>
-
       </ul>
     </header>
   </div>
