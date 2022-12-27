@@ -14,7 +14,7 @@
       content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Recipient Table</title>
+    <title>Alloted Blood Details</Details></title>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -91,7 +91,7 @@
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/index">Dashboard</a></li>
                     <li class="breadcrumb-item active" aria-current="page">
-                      Recipient Details Table
+                      Alloted Blood Details Table
                     </li>
                   </ol>
                 </nav>
@@ -112,30 +112,23 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Recipient Details</h5>
+                  <h5 class="card-title">Alloted Blood Table</h5>
                   <div class="table-responsive">
                     <table
                       id="zero_config"
                       class="table table-striped table-bordered"
                     >
                       <thead>
-                        <tr>
-                          <th>Adhaar no.</th>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Address</th>
-                          <th>Contact</th>
-                          <th>DOB</th>
-                          <th>Gender</th>
-                          <th>Weight</th>
+                      <tr>
+                          <th>Blood id</th>
                           <th>Blood Group</th>
-                          <th>ID proof</th>
-                          <th>Prescription</th>
-                          <th></th>
+                          <th>Recipient name</th>
+                          <th>Recipient adhaar</th>
+                          <th>Allotation date</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <!-- PHP CODE FOR INSERTION FROM RECIPIENT TABLE / ACTION FIELD WILL CONTAIN DELETE & EDIT BUTTON -->
+                        <!-- FETCH DATA FROM BLOOD & RECIPIENT TABLE WHICH ARE ALREADY ALLOTED -->
                       </tbody>
                     </table>
                   </div>

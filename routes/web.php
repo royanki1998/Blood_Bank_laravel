@@ -28,7 +28,7 @@ Route::group(['middleware'=>['LoginCheck']],function(){
 
 Route::group(['middleware'=>['AuthCheck']],function(){
 
-    Route::view('/index','index');
+Route::view('/index','index');
 Route::View('/widgets','widgets');
 Route::View('/charts','charts');
 Route::View('/tables','tables');
@@ -51,7 +51,17 @@ Route::get('/bloodTable',[dbController::class,'dbBlood']);
 Route::get('/recipientTable',[dbController::class,'dbRecipient']);
 Route::View('/campaigns','campaigns');
 Route::View('/userHome','userHome');
-Route::View('/donationForm','donationForm');
+Route::View('/donationFormMale','donationFormMale');
+Route::View('/donationFormFemale','donationFormFemale');
+Route::View('/addDonor','addDonor');
+Route::View('/addBlood','addBlood');
+Route::View('/addRecipient','addRecipient');
+Route::View('/allotedBlood','allotedBlood');
+Route::View('/allotBloodForm','allotBloodForm');
+Route::View('/userProfile','userProfile');
+Route::View('/userDonateM','userDonateM');
+Route::View('/userDonateF','userDonateF');
+
 Route::get('/logout',[AuthController::class,'logout']);
 
 });
