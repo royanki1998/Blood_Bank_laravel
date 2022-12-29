@@ -113,7 +113,13 @@
             <div class="col-md-4 col-lg-2">
               <div class="card card-hover">
                 <div class="box bg-cyan text-center">
-                  <h6 class="text-white py-3">A+</h6>
+                  <form action="/bloodTable" method="post">
+                    @csrf
+                    <input type="hidden" name="blood_group" value="A+">
+                    <button type="submit" class="btn bg-transparent">
+                      <h3 class="text-white py-3">A+</h3>
+                  </button>
+                </form>
                 </div>
               </div>
             </div>
@@ -121,7 +127,13 @@
             <div class="col-md-4 col-lg-2">
               <div class="card card-hover">
                 <div class="box bg-success text-center">
-                  <h6 class="text-white py-3">A-</h6>
+                <form action="/bloodTable" method="post">
+                    @csrf
+                    <input type="hidden" name="blood_group" value="A-">
+                    <button type="submit" class="btn bg-transparent">
+                      <h3 class="text-white py-3">A-</h3>
+                  </button>
+                </form>
                 </div>
               </div>
             </div>
@@ -129,7 +141,13 @@
             <div class="col-md-4 col-lg-2">
               <div class="card card-hover">
                 <div class="box bg-warning text-center">
-                  <h6 class="text-white py-3">B+</h6>
+                <form action="/bloodTable" method="post">
+                    @csrf
+                    <input type="hidden" name="blood_group" value="B+">
+                    <button type="submit" class="btn bg-transparent">
+                      <h3 class="text-white py-3">B+</h3>
+                  </button>
+                </form>
                 </div>
               </div>
             </div>
@@ -137,7 +155,13 @@
             <div class="col-md-4 col-lg-2">
               <div class="card card-hover">
                 <div class="box bg-danger text-center">
-                  <h6 class="text-white py-3">B-</h6>
+                <form action="/bloodTable" method="post">
+                    @csrf
+                    <input type="hidden" name="blood_group" value="B-">
+                    <button type="submit" class="btn bg-transparent">
+                      <h3 class="text-white py-3">B-</h3>
+                  </button>
+                </form>
                 </div>
               </div>
             </div>
@@ -145,7 +169,13 @@
             <div class="col-md-4 col-lg-2">
               <div class="card card-hover">
                 <div class="box bg-info text-center">
-                  <h6 class="text-white py-3">AB+</h6>
+                <form action="/bloodTable" method="post">
+                    @csrf
+                    <input type="hidden" name="blood_group" value="AB+">
+                    <button type="submit" class="btn bg-transparent">
+                      <h3 class="text-white py-3">AB+</h3>
+                  </button>
+                </form>
                 </div>
               </div>
             </div>
@@ -153,7 +183,13 @@
             <div class="col-md-4 col-lg-2">
               <div class="card card-hover">
                 <div class="box bg-warning text-center">
-                  <h6 class="text-white py-3">AB-</h6>
+                <form action="/bloodTable" method="post">
+                    @csrf
+                    <input type="hidden" name="blood_group" value="AB-">
+                    <button type="submit" class="btn bg-transparent">
+                      <h3 class="text-white py-3">AB-</h3>
+                  </button>
+                </form>
                 </div>
               </div>
             </div>
@@ -161,7 +197,13 @@
             <div class="col-md-4 col-lg-2">
               <div class="card card-hover">
                 <div class="box bg-info text-center">
-                  <h6 class="text-white py-3">O+</h6>
+                <form action="/bloodTable" method="post">
+                    @csrf
+                    <input type="hidden" name="blood_group" value="O+">
+                    <button type="submit" class="btn bg-transparent">
+                      <h3 class="text-white py-3">O+</h3>
+                  </button>
+                </form>
                 </div>
               </div>
             </div>
@@ -169,7 +211,13 @@
             <div class="col-md-4 col-lg-2">
               <div class="card card-hover">
                 <div class="box bg-success text-center">
-                  <h6 class="text-white py-3">O-</h6>
+                <form action="/bloodTable" method="post">
+                    @csrf
+                    <input type="hidden" name="blood_group" value="O-">
+                    <button type="submit" class="btn bg-transparent">
+                      <h3 class="text-white py-3">O-</h3>
+                  </button>
+                </form>
                 </div>
               </div>
             </div>
@@ -196,9 +244,19 @@
                           <th>Action</th>
                         </tr>
                       </thead>
+                      @foreach($bloods as $blood)
                       <tbody>
                           <!-- PHP CODE FOR INSERTION FROM DATABASE / ACTION WALE FIELD ME DELETE AUR EDIT BUTTON HONA HOAG  -->
+                          <tr>
+                            <td>{{$blood['blood_id']}}</td>
+                            <td>{{$blood['blood_group']}}</td>
+                            <td>{{$blood['donor_adhaar_no']}}</td>
+                            <td>{{$blood['d_date']}}</td>
+                            <td>{{$blood['valid_upto']}}</td>
+                            <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                         </tr>
                       </tbody>
+                      @endforeach
                     </table>
                   </div>
                 </div>
@@ -250,7 +308,7 @@
       /****************************************
        *       Basic Table                   *
        ****************************************/
-      $("#zero_config").DataTable();
+      //$("#zero_config").DataTable();
     </script>
   </body>
 </html>

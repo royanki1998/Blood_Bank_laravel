@@ -4,6 +4,7 @@
           <!-- Sidebar navigation-->
           <nav class="sidebar-nav">
             <ul id="sidebarnav" class="pt-4">
+            
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -12,6 +13,102 @@
                   ><i class="mdi mdi-view-dashboard"></i
                   ><span class="hide-menu">Dashboard</span></a
                 >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-account-multiple"></i
+                  ><span class="hide-menu">Manage Donor</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="donorTable" class="sidebar-link"
+                      ><i class="mdi mdi-account-search"></i
+                      ><span class="hide-menu"> View Donor </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="addDonor" class="sidebar-link"
+                      ><i class="mdi mdi-account-plus"></i
+                      ><span class="hide-menu"> Add Donor</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="donationFormMale" class="sidebar-link"
+                      ><i class="mdi mdi-file-check"></i
+                      ><span class="hide-menu"> Donation Form [Male]</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="donationFormFemale" class="sidebar-link"
+                      ><i class="mdi mdi-file-check"></i
+                      ><span class="hide-menu"> Donation Form [Female]</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-water"></i
+                  ><span class="hide-menu">Manage Blood</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="bloodTable" class="sidebar-link"
+                      ><i class="mdi mdi-water"></i
+                      ><span class="hide-menu"> View Blood </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="addBlood" class="sidebar-link"
+                      ><i class="mdi mdi-database-plus"></i
+                      ><span class="hide-menu"> Add Blood  </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="allotBloodForm" class="sidebar-link"
+                      ><i class="mdi mdi-water"></i
+                      ><span class="hide-menu"> Allot Blood </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="allotedBlood" class="sidebar-link"
+                      ><i class="mdi mdi-database-plus"></i
+                      ><span class="hide-menu"> Alloted Blood  </span></a
+                    >
+                  </li>
+
+                </ul>
+              </li>
+
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-table-edit"></i
+                  ><span class="hide-menu">Manage Recipient</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="recipientTable" class="sidebar-link"
+                      ><i class="mdi mdi-note-outline"></i
+                      ><span class="hide-menu"> View Recipient </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="addRecipient" class="sidebar-link"
+                      ><i class="mdi mdi-note-plus"></i
+                      ><span class="hide-menu"> Add Recipient </span></a
+                    >
+                  </li>
+                </ul>
               </li>
               <li class="sidebar-item">
                 <a
@@ -221,104 +318,6 @@
                   ><span class="hide-menu">Registration</span></a
                 >
               </li>
-
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                  ><i class="mdi mdi-account-multiple"></i
-                  ><span class="hide-menu">Manage Donor</span></a
-                >
-                <ul aria-expanded="false" class="collapse first-level">
-                  <li class="sidebar-item">
-                    <a href="donorTable" class="sidebar-link"
-                      ><i class="mdi mdi-account-search"></i
-                      ><span class="hide-menu"> View Donor </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="addDonor" class="sidebar-link"
-                      ><i class="mdi mdi-account-plus"></i
-                      ><span class="hide-menu"> Add Donor</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="donationFormMale" class="sidebar-link"
-                      ><i class="mdi mdi-file-check"></i
-                      ><span class="hide-menu"> Donation Form [Male]</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="donationFormFemale" class="sidebar-link"
-                      ><i class="mdi mdi-file-check"></i
-                      ><span class="hide-menu"> Donation Form [Female]</span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                  ><i class="mdi mdi-water"></i
-                  ><span class="hide-menu">Manage Blood</span></a
-                >
-                <ul aria-expanded="false" class="collapse first-level">
-                  <li class="sidebar-item">
-                    <a href="bloodTable" class="sidebar-link"
-                      ><i class="mdi mdi-water"></i
-                      ><span class="hide-menu"> View Blood </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="addBlood" class="sidebar-link"
-                      ><i class="mdi mdi-database-plus"></i
-                      ><span class="hide-menu"> Add Blood  </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="allotBloodForm" class="sidebar-link"
-                      ><i class="mdi mdi-water"></i
-                      ><span class="hide-menu"> Allot Blood </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="allotedBlood" class="sidebar-link"
-                      ><i class="mdi mdi-database-plus"></i
-                      ><span class="hide-menu"> Alloted Blood  </span></a
-                    >
-                  </li>
-
-                </ul>
-              </li>
-
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link has-arrow waves-effect waves-dark"
-                  href="javascript:void(0)"
-                  aria-expanded="false"
-                  ><i class="mdi mdi-table-edit"></i
-                  ><span class="hide-menu">Manage Recipient</span></a
-                >
-                <ul aria-expanded="false" class="collapse first-level">
-                  <li class="sidebar-item">
-                    <a href="recipientTable" class="sidebar-link"
-                      ><i class="mdi mdi-note-outline"></i
-                      ><span class="hide-menu"> View Recipient </span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="addRecipient" class="sidebar-link"
-                      ><i class="mdi mdi-note-plus"></i
-                      ><span class="hide-menu"> Add Recipient </span></a
-                    >
-                  </li>
-                </ul>
-              </li>
-
             </ul>
           </nav>
           <!-- End Sidebar navigation -->

@@ -62,6 +62,9 @@ Route::View('/userProfile','userProfile');
 Route::View('/userDonateM','userDonateM');
 Route::View('/userDonateF','userDonateF');
 
+
+Route::post('/bloodTable',[dbController::class,'showBlood']);
+
 Route::get('/logout',[AuthController::class,'logout']);
 
 });

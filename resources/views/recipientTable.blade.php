@@ -131,12 +131,30 @@
                           <th>Blood Group</th>
                           <th>ID proof</th>
                           <th>Prescription</th>
-                          <th></th>
+                          <th>Action</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      
                         <!-- PHP CODE FOR INSERTION FROM RECIPIENT TABLE / ACTION FIELD WILL CONTAIN DELETE & EDIT BUTTON -->
+                        @foreach($recipients as $recipient)
+                      <tbody>
+                          <!-- PHP CODE FOR INSERTION FROM DATABASE / ACTION WALE FIELD ME DELETE AUR EDIT BUTTON HONA HOAG  -->
+                          <tr>
+                            <td>{{$recipient['recipient_adhaar_no']}}</td>
+                            <td>{{$recipient['name']}}</td>
+                            <td>{{$recipient['email']}}</td>
+                            <td>{{$recipient['address']}}</td>
+                            <td>{{$recipient['phone']}}</td>
+                            <td>{{$recipient['dob']}}</td>
+                            <td>{{$recipient['gender']}}</td>
+                            <td>{{$recipient['gender']}}</td>       ????edit in database pending
+                            <td>{{$recipient['blood_group']}}</td>
+                            <td>{{$recipient['recipient_adhaar_no']}}</td>
+                            <td>{{$recipient['phone']}}</td>
+                            <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                         </tr>
                       </tbody>
+                      @endforeach
                     </table>
                   </div>
                 </div>
@@ -188,7 +206,7 @@
       /****************************************
        *       Basic Table                   *
        ****************************************/
-      $("#zero_config").DataTable();
+
     </script>
   </body>
 </html>
