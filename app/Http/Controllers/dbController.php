@@ -34,4 +34,22 @@ class dbController extends Controller
         )->get();
         return view('bloodTable',['bloods'=>$data]);
     }
+
+    function addDonor(Request $req)
+    {
+
+        $donor = new donor;
+        $donor->donor_adhaar_no=$req->adhaar_no;
+        $donor->name = $req->name;
+        $donor->email = $req->email;
+        $donor->phone = $req->phone;
+        $donor->address = $req->address;
+        $donor->dob = $req->dob;
+        $donor->gender = $req->gender;
+        $donor->weight = $req->weight;
+        $donor->blood_group = $req->bloodGroup;
+        $donor->save();
+
+        return back()->with('donorAdded','Donor added successfully.');
+    }
 }

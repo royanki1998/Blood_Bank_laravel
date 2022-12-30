@@ -307,6 +307,7 @@
         <!-- ============================================================== -->
         <!-- footer -->
         <!-- ============================================================== -->
+        
         <footer class="footer text-center">
           All Rights Reserved by JECMCA. Designed and Developed by
           Anirban De and Ankita Roy.

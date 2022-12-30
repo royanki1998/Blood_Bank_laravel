@@ -65,6 +65,8 @@ Route::View('/userDonateF','userDonateF');
 
 Route::post('/bloodTable',[dbController::class,'showBlood']);
 
+Route::post('/addDonor',[dbController::class,'addDonor']);
+
 Route::get('/logout',[AuthController::class,'logout']);
 
 });

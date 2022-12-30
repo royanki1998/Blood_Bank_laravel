@@ -80,6 +80,12 @@
 
 
         <div class="auth-box bg-dark border-top border-secondary">
+        @if(Session::has('donorAdded'))
+            <div class="alert alert-success">{{Session::get('donorAdded')}}</div>
+            @endif
+            @if(Session::has('donorFailed'))
+            <div class="alert alert-danger">{{Session::get('donorFailed')}}</div>
+            @endif
             <div>
                 <div class="text-center text-white py-4">
                     <h2>Add New Donor Details</h2>
@@ -87,7 +93,8 @@
                 </div>
 
                 <!-- Form -->
-                <form class="form-horizontal mt-3" action="index.html">
+                <form class="form-horizontal mt-3" action="addDonor" method="POST">
+                  @csrf
                     <div class="row pb-4">
                         <div class="col-12">
                             <div class="row">
@@ -101,6 +108,7 @@
                                                 ></span>
                                             </div>
                                             <input
+                                            name="adhaar_no"
                                             type="number"
                                             class="form-control form-control-lg"
                                             placeholder="Adhaar Number"
@@ -123,6 +131,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="name"
                                         type="text"
                                         class="form-control form-control-lg"
                                         placeholder="Full name"
@@ -142,6 +151,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="email"
                                         type="email"
                                         class="form-control form-control-lg"
                                         placeholder="Email"
@@ -164,6 +174,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="phone"
                                         type="number"
                                         class="form-control form-control-lg"
                                         placeholder="Contact"
@@ -183,6 +194,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="address"
                                         type="text"
                                         class="form-control form-control-lg"
                                         placeholder="Address"
@@ -205,6 +217,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="dob"
                                         type="date"
                                         class="form-control form-control-lg"
                                         placeholder="DOB"
@@ -248,6 +261,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="weight"
                                         type="number"
                                         class="form-control form-control-lg"
                                         placeholder="Weight"
@@ -267,6 +281,7 @@
                                             ></span>
                                         </div>
                                         <select 
+                                        name="bloodGroup"
                                         class="form-select shadow-none form-control form-select-lg"
                                         id="donorbloodgroup"
                                         name="donorbloodgroup"
@@ -386,8 +401,11 @@
                         </div>
                         </div>
                     </div>
+
                 </form>
                 <br><br>
+
+
             </div>
         </div>
     </div>
