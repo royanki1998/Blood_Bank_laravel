@@ -43,7 +43,7 @@
           <li class="nav-item"><a href="#gallery" class="nav-link clr">Gallery</a></li>
           <li class="nav-item"><a href="#contactus" class="nav-link clr">Contact Us</a></li>
           <li class="nav-item"><a href="/register" class="nav-link clr">Register</a></li>
-          <li class="nav-item"><a href="/login" class="nav-link clr">Login</a></li>
+          <li class="nav-item"><a href="/userLogin" class="nav-link clr">Login</a></li>
 
           </li>
 

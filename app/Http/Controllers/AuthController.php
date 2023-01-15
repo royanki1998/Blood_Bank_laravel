@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\admin;
 use Hash;
 use Session;
 
@@ -32,7 +33,7 @@ class AuthController extends Controller
             if(Hash::check($req->password,$user->password))
             {
                 $req->session()->put('loginID',$user->id);
-                return redirect('index');
+                return redirect('userProfile');
             }
             else
             {
@@ -78,7 +79,49 @@ class AuthController extends Controller
         if(Session::has('loginID'))
         {
             Session::pull('loginID');
-            return redirect('login');
+            return redirect('userLogin');
+        }
+    }
+
+
+
+    public function adminLoginPage()
+    {
+        return view('auth.adminLogin');
+        
+    }
+    public function adminLogin(Request $req)
+    {
+        //dd($req->all());
+        $req->validate([
+            'username'=>'required',
+            'password'=>'required'
+        ]);
+        $admin = Admin::where('username','=',$req->username)->first();
+        if($admin)
+        {
+            if($req->password==$admin->password)
+            {
+                $req->session()->put('adminName',$admin->username);
+                return redirect('index');
+            }
+            else
+            {
+                return back()->with('fail','Password does not match');
+            }
+        }
+        else
+        {
+            return back()->with('fail','This admin does not exist!');
+        }
+
+    }
+    public function adminLogout()
+    {
+        if(Session::has('adminName'))
+        {
+            Session::pull('adminName');
+            return redirect('adminLogin');
         }
     }
 }

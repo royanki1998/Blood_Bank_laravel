@@ -18,8 +18,10 @@ class AuthCheck
     {
         if(!Session()->has('loginID'))
         {
-            return redirect('login');
+            return redirect('userLogin');
         }
         return $next($request);
     }
+
+    
 }

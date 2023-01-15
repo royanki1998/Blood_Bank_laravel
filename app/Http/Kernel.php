@@ -48,7 +48,14 @@ class Kernel extends HttpKernel
         ],
         'LoginCheck'=>[
             \App\Http\Middleware\LoginCheck::class
+        ],
+        'AdminAuthCheck' => [
+            \App\Http\Middleware\AdminAuthCheck::class
+        ],
+        'AdminLoginCheck'=>[
+            \App\Http\Middleware\AdminLoginCheck::class
         ]
+        
     ];
 
     /**

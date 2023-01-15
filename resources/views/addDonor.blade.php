@@ -80,11 +80,16 @@
 
 
         <div class="auth-box bg-dark border-top border-secondary">
-        @if(Session::has('donorAdded'))
+            @if(Session::has('donorAdded'))
             <div class="alert alert-success">{{Session::get('donorAdded')}}</div>
             @endif
             @if(Session::has('donorFailed'))
             <div class="alert alert-danger">{{Session::get('donorFailed')}}</div>
+            @endif
+            @if($errors->any())
+                @foreach($errors->all() as $err)
+                <li>{{$err}}</li>
+                @endforeach
             @endif
             <div>
                 <div class="text-center text-white py-4">
@@ -239,6 +244,7 @@
                                         <select 
                                         class="form-select shadow-none form-control form-select-lg"
                                         id="donorgender"
+                                        required
                                         name="gender"
                                         aria-label="donorgender">
                                             <option value="">Gender</option>
@@ -282,6 +288,7 @@
                                         </div>
                                         <select 
                                         name="bloodGroup"
+                                        required
                                         class="form-select shadow-none form-control form-select-lg"
                                         id="donorbloodgroup"
                                         name="donorbloodgroup"

@@ -80,6 +80,12 @@
 
 
         <div class="auth-box bg-dark border-top border-secondary">
+        @if(Session::has('recipientAdded'))
+            <div class="alert alert-success">{{Session::get('recipientAdded')}}</div>
+            @endif
+            @if(Session::has('recipientFailed'))
+            <div class="alert alert-danger">{{Session::get('recipientFailed')}}</div>
+            @endif
             <div>
                 <div class="text-center text-white py-4">
                     <h2>Add Recipient Details</h2>
@@ -87,7 +93,8 @@
                 </div>
 
                 <!-- Form -->
-                <form class="form-horizontal mt-3" action="index.html">
+                <form class="form-horizontal mt-3" action="/addRecipient" method="post">
+                    @csrf
                     <div class="row pb-4">
                         <div class="col-12">
                             <div class="row">
@@ -101,6 +108,7 @@
                                                 ></span>
                                             </div>
                                             <input
+                                            name="adhaar_no"
                                             type="number"
                                             class="form-control"
                                             placeholder="Adhaar Number"
@@ -123,6 +131,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="name"
                                         type="text"
                                         class="form-control"
                                         placeholder="Full name"
@@ -142,6 +151,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="email"
                                         type="email"
                                         class="form-control"
                                         placeholder="Email"
@@ -164,6 +174,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="contact"
                                         type="number"
                                         class="form-control"
                                         placeholder="Contact"
@@ -183,6 +194,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="address"
                                         type="text"
                                         class="form-control"
                                         placeholder="Address"
@@ -205,6 +217,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="dob"
                                         type="date"
                                         class="form-control"
                                         placeholder="DOB"
@@ -223,7 +236,8 @@
                                                 ><i class="mdi mdi-gender-male-female fs-6"></i
                                             ></span>
                                         </div>
-                                        <select 
+                                        <select
+                                        required
                                         class="form-select shadow-none form-control"
                                         id="recipientgender"
                                         name="gender"
@@ -248,6 +262,7 @@
                                             ></span>
                                         </div>
                                         <input
+                                        name="weight"
                                         type="number"
                                         class="form-control"
                                         placeholder="Weight"
@@ -267,9 +282,10 @@
                                             ></span>
                                         </div>
                                         <select 
+                                        required
                                         class="form-select shadow-none form-control"
                                         id="recipientbloodgroup"
-                                        name="recipientbloodgroup"
+                                        name="bloodGroup"
                                         aria-label="recipientbloodgroup">
                                             <option value="">Blood group</option>
                                             <option value="A+">A+</option>

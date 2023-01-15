@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class LoginCheck
+class AdminLoginCheck
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,9 @@ class LoginCheck
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Session()->has('loginID'))
+        if(Session()->has('adminName'))
         {
-            return redirect('userProfile');
+            return redirect('index');
         }
         return $next($request);
     }

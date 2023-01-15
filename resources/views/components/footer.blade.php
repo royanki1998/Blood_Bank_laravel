@@ -28,6 +28,7 @@
 				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Campaigns</a></li>
 				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gallery</a></li>
 				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Register</a></li>
+				<li class="nav-item mb-2"><a href="/adminLogin" class="nav-link p-0 text-muted">Admin</a></li>
 				</ul>
 			</div>
 		</div>
