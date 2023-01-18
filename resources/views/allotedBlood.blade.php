@@ -15,6 +15,11 @@
     />
     <meta name="robots" content="noindex,nofollow" />
     <title>Alloted Blood Details</Details></title>
+    <style>
+      .w-5{
+        display : none
+      }
+    </style>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -127,15 +132,24 @@
                           <th>Allotation date</th>
                         </tr>
                       </thead>
+                      @foreach($bloods as $blood)
                       <tbody>
-                        <!-- FETCH DATA FROM BLOOD & RECIPIENT TABLE WHICH ARE ALREADY ALLOTED -->
+                        <tr>
+                        <td>{{$blood->id}}</td>
+                        <td>{{$blood->blood_group}}</td>
+                        <td>{{$blood->name}}</td>
+                        <td>{{$blood->recipient_adhaar_no}}</td>
+                        <td>{{$blood->r_date}}</td>
+                        </tr>
                       </tbody>
+                      @endforeach
                     </table>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
           <!-- ============================================================== -->
           <!-- End PAge Content -->
           <!-- ============================================================== -->

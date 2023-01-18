@@ -140,7 +140,7 @@
                       </thead>
                       @foreach($donors as $donor)
                       <tbody>
-                          <th>{{$donor['adhar_no']}}</th>
+                          <th>{{$donor['donor_adhaar_no']}}</th>
                           <th>{{$donor['name']}}</th>
                           <th>{{$donor['dob']}}</th>
                           <th>{{$donor['gender']}}</th>

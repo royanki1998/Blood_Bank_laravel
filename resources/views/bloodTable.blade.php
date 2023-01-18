@@ -15,6 +15,11 @@
     />
     <meta name="robots" content="noindex,nofollow" />
     <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+    <style>
+      .w-5{
+        display : none
+      }
+    </style>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -248,7 +253,7 @@
                       <tbody>
                           <!-- PHP CODE FOR INSERTION FROM DATABASE / ACTION WALE FIELD ME DELETE AUR EDIT BUTTON HONA HOAG  -->
                           <tr>
-                            <td>{{$blood['blood_id']}}</td>
+                            <td>{{$blood['id']}}</td>
                             <td>{{$blood['blood_group']}}</td>
                             <td>{{$blood['donor_adhaar_no']}}</td>
                             <td>{{$blood['d_date']}}</td>
@@ -263,6 +268,7 @@
               </div>
             </div>
           </div>
+          
           <!-- ============================================================== -->
           <!-- End PAge Content -->
           <!-- ============================================================== -->

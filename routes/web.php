@@ -72,27 +72,29 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::View('/authentication-login','authentication-login');
     Route::View('/authentication-register','authentication-register');
     Route::View('/donorRegister','donorRegister');
-    Route::get('/donorTable',[dbController::class,'dbDonor']);
-    Route::get('/bloodTable',[dbController::class,'dbBlood']);
-    Route::get('/recipientTable',[dbController::class,'dbRecipient']);
     Route::View('/campaigns','campaigns');
-
     Route::View('/donationFormMale','donationFormMale');
     Route::View('/donationFormFemale','donationFormFemale');
     Route::View('/addDonor','addDonor');
     Route::View('/addBlood','addBlood');
     Route::View('/addRecipient','addRecipient');
-    Route::View('/allotedBlood','allotedBlood');
+    
     Route::View('/allotBloodForm','allotBloodForm');
     Route::View('/userDonateM','userDonateM');
     Route::View('/userDonateF','userDonateF');
 
+
+
+    Route::get('/donorTable',[dbController::class,'dbDonor']);
+    Route::get('/bloodTable',[dbController::class,'dbBlood']);
+    Route::get('/recipientTable',[dbController::class,'dbRecipient']);
     Route::post('/bloodTable',[dbController::class,'showBlood']);
-
     Route::post('/addDonor',[dbController::class,'addDonor']);
+    Route::get('/allotedBlood',[dbController::class,'showBloodTable']);
     Route::post('/addRecipient',[dbController::class,'addRecipient']);
-
     Route::get('/adminLogout',[AuthController::class,'adminLogout']);
+
+    Route::post('/allotBlood',[dbController::class,'allotBlood']);
 
 });
 
