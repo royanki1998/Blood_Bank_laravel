@@ -84,7 +84,7 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::View('/userDonateF','userDonateF');
 
 
-
+    Route::post('/addBlood',[dbController::class,'addBlood']);
     Route::get('/donorTable',[dbController::class,'dbDonor']);
     Route::get('/bloodTable',[dbController::class,'dbBlood']);
     Route::get('/recipientTable',[dbController::class,'dbRecipient']);

@@ -44,7 +44,46 @@ class dbController extends Controller
         return view('allotedBlood',['bloods'=>$data]);
     }
 
-    function addDonor(Request $req)
+    function addBlood(Request $req)
+    {
+        $donor = donor::where('donor_adhaar_no','=',$req->donorId)->first();
+        
+        $donationData = Carbon::create($req->date);
+        $expiryDate=$donationData->addDays(42);
+        $lastDonated = Carbon::create($req->date);
+
+        $tempLast = $lastDonated->subMonths(6);
+        
+        if($donor)
+        {
+            if($tempLast>$donor->last_donated)
+            {
+                    for($count=0;$count<$req->unit;$count++)
+                {
+                    $blood = new blood;
+                    $blood->availablity=1;
+                    $blood->valid_upto=$expiryDate;
+                    $blood->donor_adhaar_no =$req->donorId;
+                    $blood->blood_group=$donor->blood_group;
+                    $blood->d_date=$req->date;
+                    $blood->save();
+                }
+
+                $donor->last_donated=$req->date;
+                $donor->save();
+                return back()->with('bloodAddSuccess','Blood added succesfully.');
+            }
+            else
+            {
+                return back()->with('bloodAddFail','Donor can only donate after 6 months from previous donation!');
+            }
+            
+        }
+        else{
+            return back()->with('bloodAddFail','Donor not found!');
+        }
+    }
+    function addDonor(Request $req)//success message handing pending here
     {
 
         $donor = new donor;
@@ -60,7 +99,7 @@ class dbController extends Controller
         $donor->save();
         return back()->with('donorAdded','Donor added successfully.');
     }
-    function addRecipient(Request $req)
+    function addRecipient(Request $req)//success message handing pending here
     {
 
         $recipient = new recipient;
@@ -76,6 +115,7 @@ class dbController extends Controller
         $recipient->save();
         
         return back()->with('recipientAdded','Recipient added successfully.');
+
     }
 
 /* ..............................................................Manage Blood .......................................*/
@@ -83,11 +123,12 @@ class dbController extends Controller
     function allotBlood(Request $req)
     {
         //dd($req->all());
-        
-
         $recipient = Recipient::where('recipient_adhaar_no','=',$req->r_id)->first();
         $bloodCount = Blood::where('blood_group','=',$recipient->blood_group)
-                            ->where('availablity','=',1)->count();
+                            ->where('availablity','=',1)
+                            ->where('valid_upto','>',$req->date)
+                            ->count();
+                            
         $bloods = Blood::where('blood_group','=',$recipient->blood_group)
                         ->where('availablity','=',1)->get();
         //$bloods = DB::table('bloods')
@@ -112,7 +153,7 @@ class dbController extends Controller
                         $blood->r_date=$req->date;
                         $affected=$blood->save();
                         $count--;
-
+ 
                     }
                     if($affected)
                     {

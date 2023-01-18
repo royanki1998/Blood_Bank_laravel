@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class donor extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'donor_adhaar_no';
 }

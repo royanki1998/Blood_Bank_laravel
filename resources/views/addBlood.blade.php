@@ -120,11 +120,18 @@
                   </div>
 
                   <!-- Form -->
-                  <form class="form-horizontal mt-3" action="index.html">
+                  <form class="form-horizontal mt-3" action="/addBlood" method ="post">
+                    @csrf
+                    @if(Session::has('bloodAddSuccess'))
+                    <div class="alert alert-success">{{Session::get('bloodAddSuccess')}}</div>
+                    @endif
+                     @if(Session::has('bloodAddFail'))
+                    <div class="alert alert-danger">{{Session::get('bloodAddFail')}}</div>
+                     @endif
                       <div class="row pb-4">
                           <div class="col-12">
                               <div class="row">
-                                  <div class="col-md-6 mb-4">
+                                  <!-- <div class="col-md-6 mb-4">
                                       <div class="input-group mb-3">
                                           <div class="input-group-prepend">
                                               <span
@@ -149,8 +156,8 @@
                                               <option value="O-">O-</option>
                                           </select>
                                       </div>
-                                  </div>
-                                  <div class="col-md-6 mb-4">
+                                  </div> -->
+                                  
                                       <div class="input-group mb-4">
                                           <div class="input-group-prepend">
                                               <span
@@ -160,6 +167,7 @@
                                               ></span>
                                           </div>
                                           <input
+                                          name = "donorId"
                                           type="number"
                                           class="form-control form-control-lg bg-dark text-white"
                                           placeholder="Donor's Adhaar No."
@@ -168,7 +176,7 @@
                                           required
                                           />
                                       </div>
-                                  </div>
+                                  
                               </div>
 
                               <div class="row">
@@ -182,11 +190,13 @@
                                               ></span>
                                           </div>
                                           <input
+                                          name="unit"
                                           type="number"
                                           class="form-control form-control-lg bg-dark text-white"
                                           placeholder="Units"
                                           aria-label="Units"
                                           aria-describedby="basic-addon1"
+                                          min=1
                                           required
                                           />
                                       </div>
@@ -201,6 +211,7 @@
                                               ></span>
                                           </div>
                                           <input
+                                          name="date"
                                           type="date"
                                           class="form-control form-control-lg bg-dark text-white"
                                           placeholder="Donation date"
