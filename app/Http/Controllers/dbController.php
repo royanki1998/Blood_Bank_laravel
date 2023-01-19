@@ -139,7 +139,7 @@ class dbController extends Controller
 
         $presExtension= $req->file('presFile')->extension();
         $presFileName=time()."-".$req->adhaar_no.".".$presExtension;
-        $presUrl=$req->adhaarFile->storeAs('uploads/prescriptionFiles',$presFileName);
+        $presUrl=$req->presFile->storeAs('uploads/prescriptionFiles',$presFileName);
         
 
         
