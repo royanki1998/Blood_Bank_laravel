@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\dbController;
+use App\Http\Controllers\docController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,6 +96,10 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::get('/adminLogout',[AuthController::class,'adminLogout']);
 
     Route::post('/allotBlood',[dbController::class,'allotBlood']);
+
+    Route::post('/showAdhaar',[docController::class,'showAdhaar']);
+    Route::post('/showPres',[docController::class,'showPres']);
+    Route::post('/delRec',[dbController::class,'delRec']);
 
 });
 

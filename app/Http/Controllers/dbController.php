@@ -88,6 +88,16 @@ class dbController extends Controller
     function addDonor(Request $req)//success message handing pending here
     {
 
+        $checkDonor= Donor::where('donor_adhaar_no','=',$req->adhaar_no)->first();
+        if($checkDonor)
+        {
+                return back()->with('donorFailed','Donor already exist!');
+        }
+        if(!$req->donorAdhaarFile)
+        {
+            return back()->with('donorFailed','Adhaar file not found!');
+        }
+
         $donor = new donor;
         $donor->donor_adhaar_no = $req->adhaar_no;
         $donor->name            = $req->name;
@@ -98,8 +108,26 @@ class dbController extends Controller
         $donor->gender          = $req->gender;
         $donor->weight          = $req->weight;
         $donor->blood_group     = $req->bloodGroup;
-        $donor->save();
-        return back()->with('donorAdded','Donor added successfully.');
+        
+        
+
+
+        $adhaarExtension= $req->file('donorAdhaarFile')->extension();
+        $adhaarFileName=time()."-".$req->adhaar_no.".".$adhaarExtension;
+        $adhaarUrl=$req->donorAdhaarFile->storeAs('uploads/donor/adhaarCard',$adhaarFileName);
+
+        $donor->adhar_file_path=$adhaarUrl;
+
+        $affacted=$donor->save();
+        if($affacted)
+        {
+            return back()->with('donorAdded','Donor added successfully.');
+        }
+        else
+        {
+            return back()->with('donorFailed','Something went wrong!');
+        }
+        
     }
     function addRecipient(Request $req)
     {
@@ -221,4 +249,20 @@ class dbController extends Controller
             return back()->with('allotFail','Recipient not found');
         }
     }
+
+    //.........................Recipient.........................
+    function delRec(Request $req)
+    {
+
+        
+        if (DB::table('bloods')->where('recipient_adhaar_no', $req->adhaarNo)->exists()) {
+            
+            return back()->with('fail','Recipient alloted for blood cannot be deleted!');
+        }
+        else{
+            $res= Recipient::where('recipient_adhaar_no',$req->adhaarNo)->delete();
+            return back();
+        }
+    }
+
 }

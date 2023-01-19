@@ -105,6 +105,10 @@
         <!-- Container fluid  -->
         <!-- ============================================================== -->
         <div class="container-fluid">
+        
+            @if(Session::has('fail'))
+            <div class="alert alert-danger">{{Session::get('fail')}}</div>
+            @endif
           <!-- ============================================================== -->
           <!-- Start Page Content -->
           <!-- ============================================================== -->
@@ -147,14 +151,34 @@
                             <td>{{$recipient['phone']}}</td>
                             <td>{{$recipient['dob']}}</td>
                             <td>{{$recipient['gender']}}</td>
-                            <td>{{$recipient['gender']}}</td>       ????edit in database pending
+                            <td>{{$recipient['gender']}}</td>       
                             <td>{{$recipient['blood_group']}}</td>
-                            <td>{{$recipient['recipient_adhaar_no']}}</td>
-                            <td>{{$recipient['phone']}}</td>
-                            <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                            <td>
+                            <form action="/showAdhaar" method ="POST">
+                              @csrf
+                              <input name ="path" type="hidden" value="{{$recipient['adhaar_file_path']}}">
+                              <button type="submit" class="btn btn-danger btn-sm">Show</button>
+                              </form>
+                            </td>
+                            <td>
+                            <form action="/showPres" method ="POST">
+                              @csrf
+                              <input name ="path" type="hidden" value="{{$recipient['prescription_file_path']}}">
+                              <button type="submit" class="btn btn-danger btn-sm">Show</button>
+                              </form>
+                            </td>
+                            <td>
+                              
+                              <form action="/delRec" method ="POST">
+                              @csrf
+                              <input name ="adhaarNo" type="hidden" value="{{$recipient['recipient_adhaar_no']}}">
+                              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                              </form>
+                            </td>
                          </tr>
                       </tbody>
                       @endforeach
+                      
                     </table>
                   </div>
                 </div>

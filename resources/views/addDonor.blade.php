@@ -98,7 +98,7 @@
                 </div>
 
                 <!-- Form -->
-                <form class="form-horizontal mt-3" action="addDonor" method="POST">
+                <form class="form-horizontal mt-3" action="addDonor" method="POST" enctype="multipart/form-data">
                   @csrf
                     <div class="row pb-4">
                         <div class="col-12">
@@ -361,6 +361,7 @@
                                         ></span>
                                         </div>
                                         <input
+                                        name="donorAdhaarFile"
                                         type="file"
                                         class="form-control form-control-lg"
                                         placeholder=""
