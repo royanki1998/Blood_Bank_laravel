@@ -83,8 +83,8 @@
         @if(Session::has('recipientAdded'))
             <div class="alert alert-success">{{Session::get('recipientAdded')}}</div>
             @endif
-            @if(Session::has('recipientFailed'))
-            <div class="alert alert-danger">{{Session::get('recipientFailed')}}</div>
+            @if(Session::has('fail'))
+            <div class="alert alert-danger">{{Session::get('fail')}}</div>
             @endif
             <div>
                 <div class="text-center text-white py-4">
@@ -93,7 +93,7 @@
                 </div>
 
                 <!-- Form -->
-                <form class="form-horizontal mt-3" action="/addRecipient" method="post">
+                <form class="form-horizontal mt-3" action="/addRecipient" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="row pb-4">
                         <div class="col-12">
@@ -312,6 +312,7 @@
                                         ></span>
                                         </div>
                                         <input
+                                        name="adhaarFile"
                                         type="file"
                                         class="form-control"
                                         placeholder=""
@@ -332,10 +333,12 @@
                                         ></span>
                                         </div>
                                         <input
+                                        name="presFile"
                                         type="file"
                                         class="form-control"
                                         placeholder=""
                                         aria-label="donorID"
+                                        
                                         aria-describedby="basic-addon1"
                                         required
                                         />

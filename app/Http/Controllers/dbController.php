@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 use App\Models\donor;
 use App\Models\recipient;
 use App\Models\blood;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 
 class dbController extends Controller
@@ -99,9 +101,14 @@ class dbController extends Controller
         $donor->save();
         return back()->with('donorAdded','Donor added successfully.');
     }
-    function addRecipient(Request $req)//success message handing pending here
+    function addRecipient(Request $req)
     {
 
+        $checkRec= Recipient::where('recipient_adhaar_no','=',$req->adhaar_no)->first();
+        if($checkRec)
+        {
+            return back()->with('fail','Recipient already exist!');
+        }
         $recipient = new recipient;
         $recipient->recipient_adhaar_no = $req->adhaar_no;
         $recipient->name                = $req->name;
@@ -112,9 +119,46 @@ class dbController extends Controller
         $recipient->gender              = $req->gender;
         $recipient->weight              = $req->weight;
         $recipient->blood_group         = $req->bloodGroup;
-        $recipient->save();
+
+        if(!$req->has('adhaarFile'))
+            {
+                return back()->with('fail','Adhaar File not found');
+            }
+
+        if(!$req->has('presFile'))
+        {
+            return back()->with('fail','Prescription File not found');
+        }
+
         
-        return back()->with('recipientAdded','Recipient added successfully.');
+
+        $adhaarExtension= $req->file('adhaarFile')->extension();
+        $adhaarFileName=time()."-".$req->adhaar_no.".".$adhaarExtension;
+        $adhaarUrl=$req->adhaarFile->storeAs('uploads/adhaarCard',$adhaarFileName);
+
+
+        $presExtension= $req->file('presFile')->extension();
+        $presFileName=time()."-".$req->adhaar_no.".".$presExtension;
+        $presUrl=$req->adhaarFile->storeAs('uploads/prescriptionFiles',$presFileName);
+        
+
+        
+
+        $recipient->prescription_file_path=$presUrl;
+        $recipient->adhaar_file_path=$adhaarUrl;
+        
+        
+        $affected=$recipient->save();
+        if($affected)
+        {
+            return back()->with('recipientAdded','Recipient added successfully.');
+        }
+       else
+       {
+           return back()->with('fail','Oops something went wrong!');
+       }
+        
+        
 
     }
 
