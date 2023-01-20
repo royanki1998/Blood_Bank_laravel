@@ -11,7 +11,9 @@
                     <span><i class="fa fa-building-o"></i> <strong>Contact: </strong>  Jorhat, Assam</span>
                     <span>&nbsp;&nbsp;&nbsp;<i class="fa fa-phone"></i> <strong>Call Us:</strong> +100-1234-12345</span>
                 </p>
+
             </div>
+
             <div class="col-md-4 col-sm-10">
                 <div class="top-bar-social">
                     <a href="#"><i class="fa-brands fa-square-facebook px-2"></i></a>
@@ -21,6 +23,7 @@
                     <a href="#"><i class="fa fa-youtube rounded-box px-2"></i></a>
                 </div>   
             </div> 
+
         </div>
 
     </div>  -->
@@ -44,7 +47,8 @@
           <li class="nav-item"><a href="/userLogin" class="nav-link clr">Login</a></li>
 
           </li>
+
         </ul>
       </header>
-    <!-- </div> -->
+    </div>
   </header>
