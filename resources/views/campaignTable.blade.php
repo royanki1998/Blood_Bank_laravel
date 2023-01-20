@@ -131,14 +131,15 @@
                             <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>for ID</td>
-                                <td>name</td>
-                                <td>location</td>
-                                <td>date</td>
-                                <td>blood</td>
-                                <td>
+                        @foreach($camps as $camp)
+                      <tbody>
+                        <tr>
+                        <td>{{$camp->id}}</td>
+                        <td>{{$camp->c_name}}</td>
+                        <td>{{$camp->c_location}}</td>
+                        <td>{{$camp->c_date}}</td>
+                        <td>{{$camp->total_blood}}</td>
+                        <td>
                                     <form action="" method="POST">
                                         <input type="hidden" name="id" value="">
                                         <button type="submit" class="btn btn-success btn-sm">Edit</button>
@@ -146,6 +147,7 @@
                                 </td>
                             </tr>
                         </tbody>
+                      @endforeach
                         </table>
                     </div>
                 </div>

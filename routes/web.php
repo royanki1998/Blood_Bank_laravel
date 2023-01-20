@@ -106,9 +106,10 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::post('/delBlood',[dbController::class,'delBlood']);
 
     // campaign routes
-    Route::View('/campaignTable','campaignTable');
-    Route::View('/campaignBloodTable','campaignBloodTable');
+    Route::get('/campaignTable',[dbController::class,'showCampTable']);
+    Route::get('/campaignBloodTable',[dbController::class,'showCampBlood']);
     Route::View('/addCampaign','addCampaign');
+    Route::post('/addCampaign',[dbController::class,'addCampaign']);
 
 });
 

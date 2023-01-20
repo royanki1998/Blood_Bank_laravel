@@ -121,17 +121,17 @@
 
                   <!-- Form -->
                   <form class="form-horizontal mt-3" action="addCampaign" method="POST" enctype="multipart/form-data">
-                  <!-- @csrf
-                  @if(Session::has('donorAdded'))
-                 <div class="alert alert-success">{{Session::get('donorAdded')}}</div>
+                  @csrf
+                  @if(Session::has('campAdded'))
+                 <div class="alert alert-success">{{Session::get('campAdded')}}</div>
                  @endif
-                 @if(Session::has('donorFailed'))
-                 <div class="alert alert-danger">{{Session::get('donorFailed')}}</div>
-                 @endif -->
+                 @if(Session::has('campAddedFail'))
+                 <div class="alert alert-danger">{{Session::get('campAddedFail')}}</div>
+                 @endif
                     <div class="row pb-4">
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-md-6 mb-4">
+                                <!-- <div class="col-md-6 mb-4">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span
@@ -150,8 +150,8 @@
                                         required
                                         />
                                     </div>
-                                </div>
-                                <div class="col-md-6 mb-4">
+                                </div> -->
+                                <!-- <div class="col-md-6 mb-4"> -->
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span
@@ -170,7 +170,7 @@
                                         required
                                         />
                                     </div>
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-4">
@@ -183,7 +183,7 @@
                                             ></span>
                                         </div>
                                         <input
-                                        name="c_loc"
+                                        name="c_location"
                                         type="name"
                                         class="form-control form-control-lg"
                                         placeholder="Campaign Location"
@@ -192,6 +192,9 @@
                                         required
                                         />
                                     </div>
+                                    @if ($errors->has('c_name'))
+                                      <span class="text-danger">Campaign name has already been taken !</span>
+                                    @endif
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="input-group mb-3">
@@ -230,7 +233,7 @@
                         </div>
                     </div>
 
-</form>
+            </form>
                   <br><br>
               </div>
           </div>
