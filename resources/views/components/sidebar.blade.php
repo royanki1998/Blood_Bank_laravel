@@ -103,25 +103,27 @@
                   class="sidebar-link has-arrow waves-effect waves-dark"
                   href="javascript:void(0)"
                   aria-expanded="false"
-                  ><i class="mdi mdi-table-edit"></i
-                  ><span class="hide-menu">Manage Campaigns</span></a
+                  ><i class="mdi mdi-crosshairs-gps"></i
+                  ><span class="hide-menu">Campaign</span></a
                 >
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="/viewCampaign" class="sidebar-link"
-                      ><i class="mdi mdi-note-outline"></i
-                      ><span class="hide-menu"> View Campaigns </span></a
-                    >
+                    <a href="campaignTable" class="sidebar-link"
+                      ><i class="mdi mdi-eye"></i
+                      ><span class="hide-menu"> View Campaign </span></a>
                   </li>
                   <li class="sidebar-item">
-                    <a href="/addCampaign" class="sidebar-link"
-                      ><i class="mdi mdi-note-plus"></i
-                      ><span class="hide-menu"> Register Campagins </span></a
-                    >
+                    <a href="campaignBloodTable" class="sidebar-link"
+                      ><i class="mdi mdi-water"></i
+                      ><span class="hide-menu"> View Blood [Camp]</span></a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="addCampaign" class="sidebar-link"
+                      ><i class="mdi mdi-plus-box"></i
+                      ><span class="hide-menu"> Add Campaign </span></a>
                   </li>
                 </ul>
               </li>
-              
               <!-- <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"

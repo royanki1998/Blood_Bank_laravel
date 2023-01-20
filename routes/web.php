@@ -86,12 +86,8 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::View('/campaigns','campaigns');
     Route::View('/addDonor','addDonor');
     Route::View('/addBlood','addBlood');
-    Route::View('/addRecipient','addRecipient');
-    
+    Route::View('/addRecipient','addRecipient'); 
     Route::View('/allotBloodForm','allotBloodForm');
-    
-
-
     Route::post('/addBlood',[dbController::class,'addBlood']);
     Route::get('/donorTable',[dbController::class,'dbDonor']);
     Route::get('/bloodTable',[dbController::class,'dbBlood']);
@@ -108,6 +104,11 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::post('/showPres',[docController::class,'showPres']);
     Route::post('/delRec',[dbController::class,'delRec']);
     Route::post('/delBlood',[dbController::class,'delBlood']);
+
+    // campaign routes
+    Route::View('/campaignTable','campaignTable');
+    Route::View('/campaignBloodTable','campaignBloodTable');
+    Route::View('/addCampaign','addCampaign');
 
 });
 
