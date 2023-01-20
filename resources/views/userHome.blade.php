@@ -1,5 +1,3 @@
-<x-user-header />
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +9,14 @@
 
 </head>
 <body>
+<div class="preloader">
+        <div class="lds-ripple">
+          <div class="lds-pos"></div>
+          <div class="lds-pos"></div>
+        </div>
+      </div>
 	<div>
+	<x-user-header />
 		<img class="back backimg" src="/image/back2.jpeg">
 	    <div id="home-main">
 			<p> The blood you donate gives <br>someone another chance at</p>

@@ -1,5 +1,3 @@
-<x-header />
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +18,11 @@
           <div class="lds-pos"></div>
         </div>
       </div>
-
-
+	  @if(Session::has('loginID'))
+	  <x-user-header />
+	  @else
+	  <x-header />
+	@endif
 	<div>
 		<img class="back backimg" src="/image/back2.jpeg">
 	    <div id="home-main">

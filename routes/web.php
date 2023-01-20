@@ -110,7 +110,7 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::get('/campaignBloodTable',[dbController::class,'showCampBlood']);
     Route::View('/addCampaign','addCampaign');
     Route::post('/addCampaign',[dbController::class,'addCampaign']);
-
+    Route::view('/userHome','userHome');
 });
 
 

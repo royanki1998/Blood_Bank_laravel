@@ -33,7 +33,7 @@ class AuthController extends Controller
             if(Hash::check($req->password,$user->password))
             {
                 $req->session()->put('loginID',$user->id);
-                return redirect('userProfile');
+                return redirect('/');
             }
             else
             {
@@ -91,7 +91,7 @@ class AuthController extends Controller
         if(Session::has('loginID'))
         {
             Session::pull('loginID');
-            return redirect('userLogin');
+            return redirect('/');
         }
     }
 

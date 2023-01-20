@@ -1,5 +1,5 @@
 <header class="main-header clearfix" data-sticky_header="true">
-<div class=" py-2 top-bar clearfix bg-dark text-white">
+<!-- <div class=" py-2 top-bar clearfix bg-dark text-white">
 
 <div class="container ">
 
@@ -26,9 +26,11 @@
 
     </div>
 
-</div> <!--  end .container -->
+</div>  -->
+<!--  end .container -->
 
-</div> <!--  end .top-bar  -->
+<!-- </div>  -->
+<!--  end .top-bar  -->
 
     <div class="container" id="home">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -42,16 +44,16 @@
         <li class="nav-item"><a href="#campaigns" class="nav-link clr">Our Campaigns</a></li>
         <li class="nav-item"><a href="#gallery" class="nav-link clr">Gallery</a></li>
         <li class="nav-item"><a href="#contactus" class="nav-link clr">Contact Us</a></li>
-        <li class="nav-item"><a href="/donationForm" class="nav-link clr">Donate</a></li>
+        <li class="nav-item"><a href="/showDonorForm" class="nav-link clr">Donate</a></li>
         <li class="nav-item drop-down">
             <a href="" class="nav-link clr drop-a">Profile</a>
             <div class="dropdown-content">
-                <a href="/">My Profile</a>
-                <a href="/">Logout</a>
+                <a href="/userProfile">My Profile</a>
+                <a href="/logout">Logout</a>
             </div>        
         </li>
         </li>
       </ul>
     </header>
-  </div>
+  <!-- </div> -->
   </header>
