@@ -50,41 +50,39 @@ class AuthController extends Controller
     {
         //dd($req->all());
 
-        // $req->validate([
-        //     'name'=>'required',
-        //     'dob'=>'required',
-        //     'address'=>'required',
-        //     'gender'=>'required',
-        //     'contact'=>'required',
-        //     'adhaarNo'=>'required',
-        //     'email'=>'required|email|unique:users',
-        //     'cPassword'=>'required',
-        //     'password'=>'required'
-        // ]);
-        if($req->password==$req->cPassword)
-        {
-            return back()->with('fail','Password does not match!');
-        }
-
-        $user= new User();
-        $user->name = $req->name;
-        $user->gender = $req->gender;
-        $user->email = $req->email;
-        $user->dob = $req->dob;
-        $user->address = $req->address;
-        $user->contact = $req->contact;
-        $user->adhaar_no = $req->adhaarNo;
+        $req->validate([
+            'name'=>'required',
+            'dob'=>'required',
+            'address'=>'required',
+            'gender'=>'required',
+            'contact'=>'required|unique:users|max:10|min:10',
+            'adhaar_no'=>'required|unique:users|max:12|min:12',
+            'email'=>'required|email|unique:users',
+            'password'=>'confirmed|required',
+            'password_confirmation'=>'required'
+        ]);
+            
+            $user= new User();
+            $user->name = $req->name;
+            $user->gender = $req->gender;
+            $user->email = $req->email;
+            $user->dob = $req->dob;
+            $user->address = $req->address;
+            $user->contact = $req->contact;
+            $user->adhaar_no = $req->adhaarNo;
         
-        $user->password = Hash::make($req->password)    ;
-        $res = $user->save();
-        if($res)
-        {
-            return back()->with('success','You have been registered');
-        }
-        else
-        {
-            return back()->with('fail','Something went wrong');
-        }
+           $user->password = Hash::make($req->password)    ;
+           $res = $user->save();
+            if($res)
+            {
+                return back()->with('success','You have been registered');
+            }
+            else
+            {
+                return back()->with('fail','Something went wrong');
+            }
+
+        
 
     }
 

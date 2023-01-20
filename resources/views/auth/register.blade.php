@@ -32,6 +32,7 @@
         <div class="col-lg-5">
           <h2 class="fw-bold mb-5">Sign up now</h2>
           <form action="{{route('register-user')}}" class="needs-validation" method="post">
+            @csrf
             @if(Session::has('success'))
             <div class="alert alert-success">{{Session::get('success')}}</div>
             @endif
@@ -43,7 +44,11 @@
             <div class="row">
                 <div class="form-outline">
                   <input name = "name" type="text" id="fname" class="form-control  shadow-none" required/>
-                  <label class="form-label" for="fname">First name</label>
+                  <label class="form-label" for="fname">Name</label>
+                  @if ($errors->has('name'))
+                    <br><span class="text-danger">{{ $errors->first('name') }}</span>
+                @endif
+                  
                 </div>
               </div>
               
@@ -52,12 +57,18 @@
                 <div class="form-outline">
                   <input name="dob" type="date" id="age" class="form-control shadow-none" required />
                   <label class="form-label" for="dob">DOB</label>
+                  @if ($errors->has('dob'))
+                    <br><span class="text-danger">{{ $errors->first('dob') }}</span>
+                @endif
                 </div>
               </div>
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
                   <input name="address" type="text" id="address" class="form-control shadow-none" />
                   <label class="form-label" for="address">Address</label>
+                  @if ($errors->has('address'))
+                    <br><span class="text-danger">{{ $errors->first('address') }}</span>
+                @endif
                 </div>
               </div>
             </div>
@@ -66,18 +77,24 @@
             <div class="row">
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <select name="gender" class="form-select shadow-none" id="gender" name="gender">
-                    <option>Select one</option>
+                  <select name="gender" class="form-select shadow-none" id="gender" required>
+                    
                     <option>Male</option>
                     <option>Female</option>
                   </select>                
                 </div>
                 <label class="form-label" for="gender">Gender</label>
+                @if ($errors->has('gender'))
+                    <br><span class="text-danger">{{ $errors->first('gender') }}</span>
+                @endif
               </div>
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input name="contact" type="number" id="contact" class="form-control shadow-none" required />
+                  <input name="contact" type="number" id="contact" class="form-control shadow-none" required min="0"  />
                   <label class="form-label" for="contact">Contact No.</label>
+                  @if ($errors->has('contact'))
+                    <br><span class="text-danger">{{ $errors->first('contact') }}</span>
+                @endif
                 </div>
               </div>
             </div>
@@ -87,14 +104,20 @@
             <div class="row">
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input name="adhaarNo" type="adhaar" id="pass" class="form-control shadow-none" required />
+                  <input name="adhaar_no" type="adhaar" id="pass" class="form-control shadow-none" required />
                   <label class="form-label" for="adhaar">Adhaar no.</label>
+                  @if ($errors->has('adhaar_no'))
+                    <br><span class="text-danger">{{ $errors->first('adhaar_no') }}</span>
+                @endif
                 </div>
               </div>
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
                   <input name="email" type="email" id="conpass" class="form-control shadow-none" required />
                   <label class="form-label" for="email">Email</label>
+                  @if ($errors->has('email'))
+                    <br><span class="text-danger">{{ $errors->first('email') }}</span>
+                @endif
                 </div>
               </div>
             </div>
@@ -105,11 +128,14 @@
                 <div class="form-outline">
                   <input name="password" type="password" id="pass" class="form-control shadow-none" required />
                   <label class="form-label" for="pass">Password</label>
+                  @if ($errors->has('password'))
+                    <br><span class="text-danger">{{ $errors->first('password') }}</span>
+                @endif
                 </div>
               </div>
               <div class="col-md-6 mb-4">
-                <div name="cPassword" class="form-outline">
-                  <input type="password" id="conpass" class="form-control shadow-none" required />
+                <div name="password_confirmation" class="form-outline">
+                  <input name="password_confirmation" type="password" id="conpass" class="form-control shadow-none" required />
                   <label class="form-label" for="conpass">Confirm password</label>
                 </div>
               </div>
