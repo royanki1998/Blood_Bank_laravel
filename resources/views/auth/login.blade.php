@@ -35,6 +35,8 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6">
           <h2 class="fw-bold mb-5">Sign in to your account</h2>
+
+          
           <form action = "{{route('login-user')}}" class="needs-validation" method="post">
             @if(Session::has('success'))
             <div class="alert alert-success">{{Session::get('success')}}</div>
