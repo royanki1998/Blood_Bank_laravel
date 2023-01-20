@@ -6,6 +6,7 @@ use Illuminate\Http\UploadedFile;
 use App\Models\donor;
 use App\Models\recipient;
 use App\Models\blood;
+use App\Models\campaign;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
@@ -271,6 +272,49 @@ class dbController extends Controller
             $res= Recipient::where('recipient_adhaar_no',$req->adhaarNo)->delete();
             return back();
         }
+    }
+
+    // ..........................campaign...............................................
+    function showCampBlood()
+    {
+        $data = DB::table('campaigns')
+                ->join('bloods','bloods.campaign_id','=','campaigns.id')
+                ->join('donors','donors.donor_adhaar_no','=','bloods.donor_adhaar_no')
+                ->get();
+
+                return view('campaignBloodTable',['bloods'=>$data]);
+    }
+
+    function showCampTable()
+    {
+        $campTable= DB::table('campaigns')->get();
+        
+        return view('campaignTable',['camps'=>$campTable]);
+    }
+    function addCampaign(Request $req)
+    {
+        // $req->validate([
+        //     'c_name'=>'required|unique:campaigns'
+        // ]);
+        if(campaign::where('c_name',$req->c_name)->exists())
+        {
+            return back()->with('campAddedFail','Campaign name has already been taken!');
+        }
+        $camp= new campaign;
+        $camp->c_name=$req->c_name;
+        $camp->c_date=$req->c_date;
+        $camp->c_location=$req->c_location;
+
+        $affacted=$camp->save();
+        if($affacted)
+        {
+            return back()->with('campAdded','Campaign added successfuly!');
+        }
+        else
+        {
+            return back()->with('campAddedFail','Something went wrong!');
+        }
+
     }
 
 }

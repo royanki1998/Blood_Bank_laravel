@@ -1,5 +1,3 @@
-<x-header />
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +18,11 @@
           <div class="lds-pos"></div>
         </div>
       </div>
-
-
+	  @if(Session::has('loginID'))
+	  <x-user-header />
+	  @else
+	  <x-header />
+	@endif
 	<div>
 		<img class="back backimg" src="/image/back2.jpeg">
 	    <div id="home-main">
@@ -221,7 +222,7 @@
 			<div class=" p-3 p-lg-5 pt-lg-3" style="margin-left:100px;">
 			<i class="fas fa-quote-left" style="color:white; font-size:2em;"></i>
 			<h2 style="color:white;">&nbsp;&nbsp;Become a Donor by joinging us....</h2><br>
-				<button type="button" class="btn btn-light anim-but"><a href="/"><b>Register today</b></a></button>
+				<button type="button" class="btn btn-light anim-but"><a href="/register"><b>Register today</b></a></button>
 			</div>
 		</div>
 

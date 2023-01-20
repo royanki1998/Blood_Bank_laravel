@@ -15,7 +15,7 @@
             <h3>My Profile</h3>
         </a>
                 <ul class="nav">
-            <li class="nav-item"><a href="" class="nav-link clr" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/" class="nav-link clr" aria-current="page">Home</a></li>
             <li class="nav-item">
                 <a href="/showDonorForm" class="nav-link clr drop-a">Donate</a>
                 <!-- <div class="dropdown-content">
