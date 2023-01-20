@@ -88,11 +88,12 @@
                 </div>
 
                 <!-- Form -->
-                <form class="form-horizontal mt-3 px-4" action="index.html">
+                <form class="form-horizontal mt-3 px-4" action="/donationFormSubmitF" method="POST">
+                    @csrf
                     <div class="row pb-4 px-2">
                         <div class="col-12">
-                            <div class="mb-4" style="width:500px;">
-                                <label for="adhaar" class="form-label">Enter Donor's registered adhaar number</label>
+                            <!-- <div class="mb-4" style="width:500px;">
+                                <label name=for="adhaar" class="form-label">Enter Donor's registered adhaar number</label>
                                 <input
                                     type="text"
                                     class="form-control"
@@ -100,7 +101,7 @@
                                     aria-label="adhaar"
                                     aria-describedby="basic-addon1"
                                     required/>
-                            </div>
+                            </div> -->
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Are you a childbearing women ?</label>
                                 <div class="mx-4">

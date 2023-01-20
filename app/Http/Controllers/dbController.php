@@ -316,5 +316,18 @@ class dbController extends Controller
         }
 
     }
+    function bloodStatus(Request $req)
+    {
+        
+        if(Blood::where('blood_group','=',$req->blood_group)->exists())
+        {
+            return back()->with('bloodFound',' found.Reach our nearest hospital.');
+        }
+        else
+        {
+            return back()->with('bloodNotFound',' found.Reach our nearest hospital.');
+        }
+        
+    }
 
 }

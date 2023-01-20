@@ -39,6 +39,10 @@ Route::group(['middleware'=>['AuthCheck']],function(){
 
     
     Route::get('/showDonorForm',[dFormController::class,'showForm']);
+    Route::post('/donationFormSubmitM',[dFormController::class,'donatStatusM']);
+    Route::post('/donationFormSubmitF',[dFormController::class,'donatStatusF']);
+    Route::post('/searchBlood',[dbController::class,'bloodStatus']);
+
     Route::View('/userDonateM','userDonateM');
     Route::View('/userDonateF','userDonateF');
 
