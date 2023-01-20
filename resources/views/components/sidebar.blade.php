@@ -35,18 +35,6 @@
                       ><span class="hide-menu"> Add Donor</span></a
                     >
                   </li>
-                  <li class="sidebar-item">
-                    <a href="donationFormMale" class="sidebar-link"
-                      ><i class="mdi mdi-file-check"></i
-                      ><span class="hide-menu"> Donation Form [Male]</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a href="donationFormFemale" class="sidebar-link"
-                      ><i class="mdi mdi-file-check"></i
-                      ><span class="hide-menu"> Donation Form [Female]</span></a
-                    >
-                  </li>
                 </ul>
               </li>
 
@@ -110,7 +98,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="sidebar-item">
+              <!-- <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
                   href="charts"
@@ -317,7 +305,7 @@
                   ><i class="mdi mdi-account-plus"></i
                   ><span class="hide-menu">Registration</span></a
                 >
-              </li>
+              </li> -->
             </ul>
           </nav>
           <!-- End Sidebar navigation -->

@@ -258,7 +258,14 @@
                             <td>{{$blood['donor_adhaar_no']}}</td>
                             <td>{{$blood['d_date']}}</td>
                             <td>{{$blood['valid_upto']}}</td>
-                            <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                            <td>
+                              <form action="/delBlood" method="POST" >
+                                @csrf
+                                <input type="hidden" name ="id" value="{{$blood['id']}}">
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                              </form>
+                              
+                            </td>
                          </tr>
                       </tbody>
                       @endforeach

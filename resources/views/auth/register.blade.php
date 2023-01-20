@@ -29,7 +29,7 @@
     <div class="card-body py-5 px-md-5">
 
       <div class="row d-flex justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-5">
           <h2 class="fw-bold mb-5">Sign up now</h2>
           <form action="{{route('register-user')}}" class="needs-validation" method="post">
             @if(Session::has('success'))
@@ -39,21 +39,14 @@
             <div class="alert alert-danger">{{Session::get('fail')}}</div>
             @endif
             @csrf
-            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <!-- 2 column grid layout with text inputs for names -->
             <div class="row">
-              <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input name = "fname" type="text" id="fname" class="form-control  shadow-none" required/>
+                  <input name = "name" type="text" id="fname" class="form-control  shadow-none" required/>
                   <label class="form-label" for="fname">First name</label>
                 </div>
               </div>
-              <div class="col-md-6 mb-4">
-                <div class="form-outline">
-                  <input name="lname" type="text" id="lname" class="form-control  shadow-none" required />
-                  <label class="form-label" for="lname">Last name</label>
-                </div>
-              </div>
-            </div>
+              
             <div class="row">
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
@@ -77,7 +70,6 @@
                     <option>Select one</option>
                     <option>Male</option>
                     <option>Female</option>
-                    <option>Others</option>
                   </select>                
                 </div>
                 <label class="form-label" for="gender">Gender</label>
@@ -91,11 +83,11 @@
             </div>
 
 
-            <!-- Email input -->
+            <!-- adhhar  and Email input -->
             <div class="row">
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input name="adhar" type="adhaar" id="pass" class="form-control shadow-none" required />
+                  <input name="adhaarNo" type="adhaar" id="pass" class="form-control shadow-none" required />
                   <label class="form-label" for="adhaar">Adhaar no.</label>
                 </div>
               </div>
@@ -116,7 +108,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-4">
-                <div class="form-outline">
+                <div name="cPassword" class="form-outline">
                   <input type="password" id="conpass" class="form-control shadow-none" required />
                   <label class="form-label" for="conpass">Confirm password</label>
                 </div>

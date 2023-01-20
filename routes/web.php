@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\dbController;
 use App\Http\Controllers\docController;
+use App\Http\Controllers\dFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,15 @@ Route::group(['middleware'=>['LoginCheck']],function(){
 
 /* if not login then loginpage */
 Route::group(['middleware'=>['AuthCheck']],function(){
+
+    
+    Route::get('/showDonorForm',[dFormController::class,'showForm']);
+    Route::View('/userDonateM','userDonateM');
+    Route::View('/userDonateF','userDonateF');
+
+    Route::View('/donationFormMale','donationFormMale');
+    Route::View('/donationFormFemale','donationFormFemale');
+    
     Route::View('/userProfile','userProfile');
     Route::get('/logout',[AuthController::class,'logout']);
 });
@@ -74,15 +84,12 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::View('/authentication-register','authentication-register');
     Route::View('/donorRegister','donorRegister');
     Route::View('/campaigns','campaigns');
-    Route::View('/donationFormMale','donationFormMale');
-    Route::View('/donationFormFemale','donationFormFemale');
     Route::View('/addDonor','addDonor');
     Route::View('/addBlood','addBlood');
     Route::View('/addRecipient','addRecipient');
     
     Route::View('/allotBloodForm','allotBloodForm');
-    Route::View('/userDonateM','userDonateM');
-    Route::View('/userDonateF','userDonateF');
+    
 
 
     Route::post('/addBlood',[dbController::class,'addBlood']);
@@ -100,6 +107,7 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::post('/showAdhaar',[docController::class,'showAdhaar']);
     Route::post('/showPres',[docController::class,'showPres']);
     Route::post('/delRec',[dbController::class,'delRec']);
+    Route::post('/delBlood',[dbController::class,'delBlood']);
 
 });
 

@@ -80,17 +80,8 @@
 
 
         <div class="auth-box bg-dark border-top border-secondary">
-            @if(Session::has('donorAdded'))
-            <div class="alert alert-success">{{Session::get('donorAdded')}}</div>
-            @endif
-            @if(Session::has('donorFailed'))
-            <div class="alert alert-danger">{{Session::get('donorFailed')}}</div>
-            @endif
-            @if($errors->any())
-                @foreach($errors->all() as $err)
-                <li>{{$err}}</li>
-                @endforeach
-            @endif
+            
+            
             <div>
                 <div class="text-center text-white py-4">
                     <h2>Add New Donor Details</h2>
@@ -100,6 +91,12 @@
                 <!-- Form -->
                 <form class="form-horizontal mt-3" action="addDonor" method="POST" enctype="multipart/form-data">
                   @csrf
+                  @if(Session::has('donorAdded'))
+                 <div class="alert alert-success">{{Session::get('donorAdded')}}</div>
+                 @endif
+                 @if(Session::has('donorFailed'))
+                 <div class="alert alert-danger">{{Session::get('donorFailed')}}</div>
+                 @endif
                     <div class="row pb-4">
                         <div class="col-12">
                             <div class="row">

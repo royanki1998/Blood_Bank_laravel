@@ -4,7 +4,7 @@
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
               <!-- Logo icon -->
               <b class="logo-icon ps-2">
                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -70,7 +70,7 @@
               <!-- ============================================================== -->
               <!-- create new -->
               <!-- ============================================================== -->
-              <li class="nav-item dropdown">
+              <!-- <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -94,7 +94,7 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
               <!-- ============================================================== -->
               <!-- Search -->
               <!-- ============================================================== -->
@@ -121,7 +121,7 @@
               <!-- ============================================================== -->
               <!-- Comment -->
               <!-- ============================================================== -->
-              <li class="nav-item dropdown">
+              <!-- <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -140,14 +140,14 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
               <!-- ============================================================== -->
               <!-- End Comment -->
               <!-- ============================================================== -->
               <!-- ============================================================== -->
               <!-- Messages -->
               <!-- ============================================================== -->
-              <li class="nav-item dropdown">
+              <!-- <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle waves-effect waves-dark"
                   href="#"
@@ -170,7 +170,6 @@
                   <ul class="list-style-none">
                     <li>
                       <div class="">
-                        <!-- Message -->
                         <a href="javascript:void(0)" class="link border-top">
                           <div class="d-flex no-block align-items-center p-10">
                             <span
@@ -189,8 +188,7 @@
                               >
                             </div>
                           </div>
-                        </a>
-                        <!-- Message -->
+                        </a> 
                         <a href="javascript:void(0)" class="link border-top">
                           <div class="d-flex no-block align-items-center p-10">
                             <span
@@ -210,7 +208,6 @@
                             </div>
                           </div>
                         </a>
-                        <!-- Message -->
                         <a href="javascript:void(0)" class="link border-top">
                           <div class="d-flex no-block align-items-center p-10">
                             <span
@@ -230,7 +227,6 @@
                             </div>
                           </div>
                         </a>
-                        <!-- Message -->
                         <a href="javascript:void(0)" class="link border-top">
                           <div class="d-flex no-block align-items-center p-10">
                             <span
@@ -254,7 +250,7 @@
                     </li>
                   </ul>
                 </ul>
-              </li>
+              </li> -->
               <!-- ============================================================== -->
               <!-- End Messages -->
               <!-- ============================================================== -->
@@ -291,17 +287,8 @@
                   <a class="dropdown-item" href="javascript:void(0)"
                     ><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a
                   >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="mdi mdi-wallet me-1 ms-1"></i> My Balance</a
-                  >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="mdi mdi-email me-1 ms-1"></i> Inbox</a
-                  >
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="mdi mdi-settings me-1 ms-1"></i> Account
-                    Setting</a
-                  >
+                  
+                  
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="/adminLogout"
                     ><i class="fa fa-power-off me-1 ms-1"></i> Logout</a

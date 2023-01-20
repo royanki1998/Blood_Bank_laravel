@@ -50,17 +50,31 @@ class AuthController extends Controller
     {
         //dd($req->all());
 
-        $req->validate([
-            'fname'=>'required',
-            'lname'=>'required',
-            'email'=>'required|email|unique:users',
-            'password'=>'required'
-        ]);
+        // $req->validate([
+        //     'name'=>'required',
+        //     'dob'=>'required',
+        //     'address'=>'required',
+        //     'gender'=>'required',
+        //     'contact'=>'required',
+        //     'adhaarNo'=>'required',
+        //     'email'=>'required|email|unique:users',
+        //     'cPassword'=>'required',
+        //     'password'=>'required'
+        // ]);
+        if($req->password==$req->cPassword)
+        {
+            return back()->with('fail','Password does not match!');
+        }
 
         $user= new User();
-        $user->fname = $req->fname;
-        $user->lname = $req->lname;
+        $user->name = $req->name;
+        $user->gender = $req->gender;
         $user->email = $req->email;
+        $user->dob = $req->dob;
+        $user->address = $req->address;
+        $user->contact = $req->contact;
+        $user->adhaar_no = $req->adhaarNo;
+        
         $user->password = Hash::make($req->password)    ;
         $res = $user->save();
         if($res)

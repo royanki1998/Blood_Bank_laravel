@@ -25,18 +25,7 @@ class dbController extends Controller
         return view('recipientTable',['recipients'=>$data]);
     }
 
-    function dbBlood()
-    {
-        $data = blood::paginate(5);
-        return view('bloodTable',['bloods'=>$data]);
-    }
-
-    function showBlood(Request $req)//blood table page
-    {
-        $data = blood::where('blood_group',$req->blood_group
-        )->get();
-        return view('bloodTable',['bloods'=>$data]);
-    }
+    
     function showBloodTable()
     {
         $data = DB::table('bloods')
@@ -88,8 +77,8 @@ class dbController extends Controller
     function addDonor(Request $req)//success message handing pending here
     {
 
-        $checkDonor= Donor::where('donor_adhaar_no','=',$req->adhaar_no)->first();
-        if($checkDonor)
+        
+        if(Donor::where('donor_adhaar_no','=',$req->adhaar_no)->exists())
         {
                 return back()->with('donorFailed','Donor already exist!');
         }
@@ -132,8 +121,8 @@ class dbController extends Controller
     function addRecipient(Request $req)
     {
 
-        $checkRec= Recipient::where('recipient_adhaar_no','=',$req->adhaar_no)->first();
-        if($checkRec)
+        
+        if(Recipient::where('recipient_adhaar_no','=',$req->adhaar_no)->exists())
         {
             return back()->with('fail','Recipient already exist!');
         }
@@ -191,25 +180,44 @@ class dbController extends Controller
     }
 
 /* ..............................................................Manage Blood .......................................*/
-    
+    function dbBlood()
+    {
+        $data = blood::paginate(5);
+        return view('bloodTable',['bloods'=>$data]);
+    }
+
+    function showBlood(Request $req)//blood table page
+    {
+        $data = blood::where('blood_group',$req->blood_group
+        )
+        ->where('availablity','=',1)
+        ->get();
+        return view('bloodTable',['bloods'=>$data]);
+    }
+    function delBlood(Request $req)
+    {    
+            $res= Blood::where('id',$req->id)->delete();
+            return back();    
+    }
+
+
     function allotBlood(Request $req)
     {
-        //dd($req->all());
-        $recipient = Recipient::where('recipient_adhaar_no','=',$req->r_id)->first();
-        $bloodCount = Blood::where('blood_group','=',$recipient->blood_group)
+       
+        
+        
+        
+        
+        if(Recipient::where('recipient_adhaar_no','=',$req->r_id)->exists())
+        {
+            $recipient = Recipient::where('recipient_adhaar_no','=',$req->r_id)->first();
+            $bloodCount = Blood::where('blood_group','=',$recipient->blood_group)
                             ->where('availablity','=',1)
                             ->where('valid_upto','>',$req->date)
                             ->count();
                             
-        $bloods = Blood::where('blood_group','=',$recipient->blood_group)
+            $bloods = Blood::where('blood_group','=',$recipient->blood_group)
                         ->where('availablity','=',1)->get();
-        //$bloods = DB::table('bloods')
-        //            ->select('blood_id')
-        //            ->where('blood_group','=',$recipient->blood_group,'and','avalability','=',1)
-         //           ->get();
-        
-        if($recipient)
-        {
             if($bloodCount>=$req->unit)
                 {
                     $affected=null;

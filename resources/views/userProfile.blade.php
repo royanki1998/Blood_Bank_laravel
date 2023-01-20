@@ -16,12 +16,12 @@
         </a>
                 <ul class="nav">
             <li class="nav-item"><a href="" class="nav-link clr" aria-current="page">Home</a></li>
-            <li class="nav-item drop-down">
-                <a href="" class="nav-link clr drop-a">Donate</a>
-                <div class="dropdown-content">
+            <li class="nav-item">
+                <a href="/showDonorForm" class="nav-link clr drop-a">Donate</a>
+                <!-- <div class="dropdown-content">
                     <a href="/userDonateM">Donation Form [Male]</a>
-                    <a href="/userDonateF">Donation Form [Male]</a>
-                </div>        
+                    <a href="/userDonateF">Donation Form [Female]</a>
+                </div>         -->
             </li>
             <li class="nav-item"><a href="/logout" class="nav-link clr">Logout</a></li>
             </li>
