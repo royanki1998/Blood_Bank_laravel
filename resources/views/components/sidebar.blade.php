@@ -98,6 +98,30 @@
                   </li>
                 </ul>
               </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-table-edit"></i
+                  ><span class="hide-menu">Manage Campaigns</span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="/viewCampaign" class="sidebar-link"
+                      ><i class="mdi mdi-note-outline"></i
+                      ><span class="hide-menu"> View Campaigns </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="/addCampaign" class="sidebar-link"
+                      ><i class="mdi mdi-note-plus"></i
+                      ><span class="hide-menu"> Register Campagins </span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              
               <!-- <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -116,15 +140,7 @@
                   ><span class="hide-menu">Widgets</span></a
                 >
               </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="tables"
-                  aria-expanded="false"
-                  ><i class="mdi mdi-border-inside"></i
-                  ><span class="hide-menu">Tables</span></a
-                >
-              </li>
+              
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
