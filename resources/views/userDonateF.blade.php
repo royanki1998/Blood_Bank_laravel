@@ -104,27 +104,27 @@
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Are you a childbearing women ?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r1" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r1" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             </div>
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Are you a breastfeeding mother ? </label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r2" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r2" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             </div>
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Did you had any child birth in past 1 year ? </label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r3" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r3" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             </div>
@@ -132,9 +132,9 @@
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Have the donor donated blood in the last three months? </label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r4" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r4" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             
@@ -142,18 +142,18 @@
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Had any alcoholic beverages in 24 hours ?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r5" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r5" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             </div>
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Have the donor had dental work or taken Aspirin in 72 hours?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r6" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r6" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             
@@ -161,36 +161,36 @@
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Suffering from cough, influenza or sore throat, common cold ?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r7" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r7" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             </div>
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Have the donor had any antibiotics or any other medications (Allopathic or Ayurveda or Sidha or Homeo) in last 48 hours ?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r8" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r8" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             </div>
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Was the donor treated for Rabies or received Hepatitis B immune globulin in past one year ? </label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r9" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r9" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             </div>
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Have the donor been treated for Malaria in past three months?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r10" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r10" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             
@@ -198,18 +198,18 @@
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Have the donor had any immunizations in recent one month ?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r11" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r11" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             </div>
                             <div class="mb-4">
                                 <label for="donation" class="form-label">if you had tattoo, ear or skin piercing or acupuncture, received blood or blood products, serious illness or major surgery, contact with a person with hepatitis or yellow jaundice in past six months ?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r12" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r12" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             
@@ -217,9 +217,9 @@
                             <div class="mb-4">
                                 <label for="donation" class="form-label">Is the donor a Diabetes patient or suffering from chest pain, heart disease or high BP,?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r13" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r13" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             </div>
@@ -227,9 +227,9 @@
                                 <label for="donation" class="form-label">Does the donor has cancer, blood clotting problem or blood disease, unexplained fever, weight loss, fatigue, 
                                     night sweats, enlarged lymph nodes in armpits, neck or groin, white patches in the mouth etc. ?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r14" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r14" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             
@@ -239,9 +239,9 @@
                                     liver disease, kidney disease, fits or fainting, blue or purple spots on the skin or mucous membranes, 
                                     received human pituitary - growth hormones etc . ?</label>
                                 <div class="mx-4">
-                                    <input class="form-input" type="radio" name="donated" id="donatedYes" value="yes">
+                                    <input class="form-input" type="radio" name="r15" id="donatedYes" value="yes">
                                     <label class="form-label">Yes</label> &nbsp;   
-                                    <input class="form-input" type="radio" name="donated" id="donatedNo" value="no">
+                                    <input class="form-input" type="radio" name="r15" id="donatedNo" value="no">
                                     <label class="form-label">No</label>    
                                 </div>                            
                             
