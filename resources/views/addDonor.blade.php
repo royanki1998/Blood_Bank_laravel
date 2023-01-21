@@ -348,7 +348,7 @@
                             </div> -->
                             
                             <div class="row">
-                                <div class="col-md-6 mb-4">
+                                <!-- <div class="col-md-6 mb-4"> -->
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                         <span
@@ -368,9 +368,9 @@
                                         />
                                     </div>
                                     <label for="donorID" style="color:white;">Upload donor's Adhaar card properly showing the DOB</label>
-                                </div>
+                                <!-- </div> -->
 
-                                <div class="col-md-6 mb-4">
+                                <!-- <div class="col-md-6 mb-4">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                         <span
@@ -389,7 +389,7 @@
                                         />
                                     </div>
 
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

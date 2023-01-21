@@ -128,7 +128,7 @@
                             <th>Location</th>
                             <th>Event Date</th>
                             <th>Blood collected</th>
-                            <th>Action</th>
+                            <!-- <th>Actigiton</th> -->
                             </tr>
                         </thead>
                         @foreach($camps as $camp)
@@ -139,12 +139,12 @@
                         <td>{{$camp->c_location}}</td>
                         <td>{{$camp->c_date}}</td>
                         <td>{{$camp->total_blood}}</td>
-                        <td>
+                        <!-- <td>
                                     <form action="" method="POST">
                                         <input type="hidden" name="id" value="">
                                         <button type="submit" class="btn btn-success btn-sm">Edit</button>
                                     </form>
-                                </td>
+                                </td> -->
                             </tr>
                         </tbody>
                       @endforeach

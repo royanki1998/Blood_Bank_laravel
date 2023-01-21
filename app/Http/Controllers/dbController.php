@@ -328,7 +328,5 @@ class dbController extends Controller
         {
             return back()->with('bloodNotFound',' found.Reach our nearest hospital.');
         }
-        
     }
-
 }

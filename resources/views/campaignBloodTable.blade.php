@@ -128,7 +128,7 @@
                             <th>Donor Name</th>
                             <th>Donation Date</th>
                             <th>Blood group</th>
-                            <th>Action</th>
+                            <!-- <th>Action</th> -->
                             </tr>
                         </thead>
                         @foreach($bloods as $blood)
@@ -139,12 +139,12 @@
                         <td>{{$blood->name}}</td>
                         <td>{{$blood->d_date}}</td>
                         <td>{{$blood->blood_group}}</td>
-                        <td>
+                        <!-- <td>
                                     <form action="" method="POST">
                                         <input type="hidden" name="id" value="">
                                         <button type="submit" class="btn btn-success btn-sm">Edit</button>
                                     </form>
-                                </td>
+                                </td> -->
                             </tr>
                         </tbody>
                       @endforeach
