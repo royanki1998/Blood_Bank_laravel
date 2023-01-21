@@ -108,9 +108,9 @@
               <div class="card card-hover">
                 <div class="box bg-cyan text-center">
                   <h1 class="font-light text-white">
-                    <i class="mdi mdi-view-dashboard"></i>
+                    <a href="/index"><i class="mdi mdi-view-dashboard text-white"></i></a>
                   </h1>
-                  <h6 class="text-white">Dashboard</h6>
+                  <h6><a href="/index" class="text-white">Dashboard</a></h6>
                 </div>
               </div>
             </div>
@@ -119,9 +119,9 @@
               <div class="card card-hover">
                 <div class="box bg-success text-center">
                   <h1 class="font-light text-white">
-                    <i class="mdi mdi-chart-areaspline"></i>
+                  <a href="/donorTable"><i class="mdi mdi-account-search text-white"></i></a>
                   </h1>
-                  <h6 class="text-white">Charts</h6>
+                  <h6><a href="/donorTable" class="text-white">Donors Details</a></h6>
                 </div>
               </div>
             </div>
@@ -130,9 +130,9 @@
               <div class="card card-hover">
                 <div class="box bg-warning text-center">
                   <h1 class="font-light text-white">
-                    <i class="mdi mdi-collage"></i>
+                  <a href="/recipientTable"><i class="mdi mdi-note-outline text-white"></i></a>
                   </h1>
-                  <h6 class="text-white">Widgets</h6>
+                  <h6><a href="/recipientTable" class="text-white">Recipients Details</a></h6>
                 </div>
               </div>
             </div>
@@ -141,9 +141,9 @@
               <div class="card card-hover">
                 <div class="box bg-danger text-center">
                   <h1 class="font-light text-white">
-                    <i class="mdi mdi-border-outside"></i>
+                  <a href="/bloodTable"><i class="mdi mdi-water text-white"></i></a>
                   </h1>
-                  <h6 class="text-white">Tables</h6>
+                  <h6><a href="/bloodTable" class="text-white">Blood Details</a></h6>
                 </div>
               </div>
             </div>
@@ -152,9 +152,9 @@
               <div class="card card-hover">
                 <div class="box bg-info text-center">
                   <h1 class="font-light text-white">
-                    <i class="mdi mdi-arrow-all"></i>
+                  <a href="/campaignTable"><i class="mdi mdi-crosshairs-gps text-white"></i></a>
                   </h1>
-                  <h6 class="text-white">Full Width</h6>
+                  <h6><a href="/campaignTable" class="text-white">Campaign Details</a></h6>
                 </div>
               </div>
             </div>
@@ -164,9 +164,9 @@
               <div class="card card-hover">
                 <div class="box bg-danger text-center">
                   <h1 class="font-light text-white">
-                    <i class="mdi mdi-receipt"></i>
+                  <a href="/addDonor"><i class="mdi mdi-account-plus text-white"></i></a>
                   </h1>
-                  <h6 class="text-white">Forms</h6>
+                  <h6><a href="/addDonor" class="text-white">Add Donors</a></h6>
                 </div>
               </div>
             </div>
@@ -175,9 +175,9 @@
               <div class="card card-hover">
                 <div class="box bg-info text-center">
                   <h1 class="font-light text-white">
-                    <i class="mdi mdi-relative-scale"></i>
+                  <a href="/addBlood"><i class="mdi mdi-database-plus text-white"></i></a>
                   </h1>
-                  <h6 class="text-white">Buttons</h6>
+                  <h6><a href="/addBlood" class="text-white">Add Blood</a></h6>
                 </div>
               </div>
             </div>
@@ -186,9 +186,9 @@
               <div class="card card-hover">
                 <div class="box bg-cyan text-center">
                   <h1 class="font-light text-white">
-                    <i class="mdi mdi-pencil"></i>
+                  <a href="/addRecipient"><i class="mdi mdi-note-plus text-white"></i></a>
                   </h1>
-                  <h6 class="text-white">Elements</h6>
+                  <h6><a href="/addRecipient" class="text-white">Add Recipients</a></h6>
                 </div>
               </div>
             </div>
@@ -197,24 +197,12 @@
               <div class="card card-hover">
                 <div class="box bg-success text-center">
                   <h1 class="font-light text-white">
-                    <i class="mdi mdi-calendar-check"></i>
+                  <a href="/addCampaign"><i class="mdi mdi-plus-box text-white"></i></a>
                   </h1>
-                  <h6 class="text-white">Calnedar</h6>
+                  <h6><a href="/addCampaign" class="text-white">Add Campaign</a></h6>
                 </div>
               </div>
             </div>
-            <!-- Column -->
-            <div class="col-md-6 col-lg-2 col-xlg-3">
-              <div class="card card-hover">
-                <div class="box bg-warning text-center">
-                  <h1 class="font-light text-white">
-                    <i class="mdi mdi-alert"></i>
-                  </h1>
-                  <h6 class="text-white">Errors</h6>
-                </div>
-              </div>
-            </div>
-            <!-- Column -->
           </div>
           <!-- ============================================================== -->
           <!-- Sales chart -->
@@ -225,7 +213,7 @@
                 <div class="card-body">
                   <div class="d-md-flex align-items-center">
                     <div>
-                      <h4 class="card-title">Site Analysis</h4>
+                      <h4 class="card-title">Data Analysis of Blood Bank</h4>
                       <h5 class="card-subtitle">Overview</h5>
                     </div>
                   </div>
@@ -239,48 +227,41 @@
                         ></div>
                       </div>
                     </div> -->
-                    <div class="col-lg-3">
+                    <div class="col-lg-10">
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-4">
                           <div class="bg-dark p-10 text-white text-center">
                             <i class="mdi mdi-account fs-3 mb-1 font-16"></i>
                             <h5 class="mb-0 mt-1">2540</h5>
                             <small class="font-light">Total Users</small>
                           </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-4">
                           <div class="bg-dark p-10 text-white text-center">
                             <i class="mdi mdi-plus fs-3 font-16"></i>
                             <h5 class="mb-0 mt-1">120</h5>
-                            <small class="font-light">New Users</small>
+                            <small class="font-light">New Donors</small>
                           </div>
                         </div>
-                        <div class="col-6 mt-3">
+                        <div class="col-4">
                           <div class="bg-dark p-10 text-white text-center">
-                            <i class="mdi mdi-cart fs-3 mb-1 font-16"></i>
+                            <i class="mdi mdi-account-multiple fs-3 mb-1 font-16"></i>
                             <h5 class="mb-0 mt-1">656</h5>
-                            <small class="font-light">Total Shop</small>
+                            <small class="font-light">Total Recipient</small>
                           </div>
                         </div>
                         <div class="col-6 mt-3">
                           <div class="bg-dark p-10 text-white text-center">
-                            <i class="mdi mdi-tag fs-3 mb-1 font-16"></i>
-                            <h5 class="mb-0 mt-1">9540</h5>
-                            <small class="font-light">Total Orders</small>
+                            <i class="mdi mdi-crosshairs-gps fs-3 mb-1 font-16"></i>
+                            <h5 class="mb-0 mt-1">95</h5>
+                            <small class="font-light">Total Campaigns</small>
                           </div>
                         </div>
                         <div class="col-6 mt-3">
                           <div class="bg-dark p-10 text-white text-center">
-                            <i class="mdi mdi-table fs-3 mb-1 font-16"></i>
-                            <h5 class="mb-0 mt-1">100</h5>
-                            <small class="font-light">Pending Orders</small>
-                          </div>
-                        </div>
-                        <div class="col-6 mt-3">
-                          <div class="bg-dark p-10 text-white text-center">
-                            <i class="mdi mdi-web fs-3 mb-1 font-16"></i>
-                            <h5 class="mb-0 mt-1">8540</h5>
-                            <small class="font-light">Online Orders</small>
+                            <i class="mdi mdi-water fs-3 mb-1 font-16"></i>
+                            <h5 class="mb-0 mt-1">106</h5>
+                            <small class="font-light">Blood transfusion</small>
                           </div>
                         </div>
                       </div>

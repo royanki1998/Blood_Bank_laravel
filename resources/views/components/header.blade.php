@@ -42,7 +42,7 @@
           <li class="nav-item"><a href="#" class="nav-link clr" aria-current="page">Home</a></li>
           <li class="nav-item"><a href="#about" class="nav-link clr">About Us</a></li>
           <li class="nav-item"><a href="#campaigns" class="nav-link clr">Our Campaigns</a></li>
-          <li class="nav-item"><a href="#gallery" class="nav-link clr">Gallery</a></li>
+          <!-- <li class="nav-item"><a href="#gallery" class="nav-link clr">Gallery</a></li> -->
           <li class="nav-item"><a href="#contactus" class="nav-link clr">Contact Us</a></li>
           <li class="nav-item"><a href="/register" class="nav-link clr">Register</a></li>
           <li class="nav-item"><a href="/userLogin" class="nav-link clr">Login</a></li>

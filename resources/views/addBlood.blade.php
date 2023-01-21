@@ -157,26 +157,47 @@
                                           </select>
                                       </div>
                                   </div> -->
-                                  
-                                      <div class="input-group mb-4">
+                                  <div class="col-md-6 mb-4">
+                                    <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span
+                                                    class="input-group-text bg-success text-white h-100"
+                                                    id="donoradhaar"
+                                                    ><i class="mdi mdi-newspaper fs-4"></i></span>
+                                            </div>
+                                            <input
+                                            name = "donorId"
+                                            type="number"
+                                            class="form-control form-control-lg bg-dark text-white"
+                                            placeholder="Donor's Adhaar No."
+                                            aria-label="donoradhaar"
+                                            aria-describedby="basic-addon1"
+                                            required
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <div class="input-group mb-3">
                                           <div class="input-group-prepend">
                                               <span
                                                   class="input-group-text bg-success text-white h-100"
-                                                  id="donoradhaar"
-                                                  ><i class="mdi mdi-newspaper fs-4"></i
+                                                  id="campaignid"
+                                                  ><i class="mdi mdi-crosshairs-gps fs-4"></i
                                               ></span>
                                           </div>
                                           <input
-                                          name = "donorId"
+                                          name="campaignid"
                                           type="number"
                                           class="form-control form-control-lg bg-dark text-white"
-                                          placeholder="Donor's Adhaar No."
-                                          aria-label="donoradhaar"
+                                          placeholder="Campaign ID"
+                                          aria-label="campaignid"
                                           aria-describedby="basic-addon1"
+                                          min=1
                                           required
                                           />
                                       </div>
-                                  
+                                  </div>
+
                               </div>
 
                               <div class="row">
