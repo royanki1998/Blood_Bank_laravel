@@ -58,6 +58,7 @@ class dbController extends Controller
                     $blood->donor_adhaar_no =$req->donorId;
                     $blood->blood_group=$donor->blood_group;
                     $blood->d_date=$req->date;
+                    $blood->campaign_id=$req->campId;
                     $blood->save();
                 }
 

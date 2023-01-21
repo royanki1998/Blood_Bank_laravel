@@ -224,6 +224,28 @@
                               </div>
                           </div>
                       </div>
+                      <div class="row">
+                                  
+                                      <div class="input-group mb-4">
+                                          <div class="input-group-prepend">
+                                              <span
+                                                  class="input-group-text bg-success text-white h-100"
+                                                  id="donoradhaar"
+                                                  ><i class="mdi mdi-newspaper fs-4"></i
+                                              ></span>
+                                          </div>
+                                          <input
+                                          name = "campId"
+                                          type="number"
+                                          class="form-control form-control-lg bg-dark text-white"
+                                          placeholder="Campaign id"
+                                          aria-label="campid"
+                                          aria-describedby="basic-addon1"
+                                          required
+                                          />
+                                      </div>
+                                  
+                              </div>
                       <div class="row border-top border-secondary">
                           <div class="col-12">
                           <div class="form-group py-4">

@@ -88,10 +88,12 @@ Route::group(['middleware'=>['AdminAuthCheck']],function(){
     Route::View('/authentication-register','authentication-register');
     Route::View('/donorRegister','donorRegister');
     Route::View('/campaigns','campaigns');
+
     Route::View('/addDonor','addDonor');
     Route::View('/addBlood','addBlood');
     Route::View('/addRecipient','addRecipient'); 
     Route::View('/allotBloodForm','allotBloodForm');
+    
     Route::post('/addBlood',[dbController::class,'addBlood']);
     Route::get('/donorTable',[dbController::class,'dbDonor']);
     Route::get('/bloodTable',[dbController::class,'dbBlood']);
